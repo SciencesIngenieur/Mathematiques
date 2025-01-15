@@ -31,8 +31,7 @@ section{
   padding-top: 1cm;
   padding-bottom: 2cm;
   background: #FFFFFF;
-  counter-reset: titre_1;
-  counter-reset: indice_tableau;
+  counter-reset: titre_1 indice_tableau;
 }
 
 footer{
@@ -261,7 +260,7 @@ table {
 }
 
 /* Titre du tableau */ 
-caption {
+table caption {
   caption-side: bottom;
   margin-top: 0.5em;
   text-align: center;
