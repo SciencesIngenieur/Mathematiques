@@ -32,6 +32,7 @@ section{
   padding-bottom: 2cm;
   background: #FFFFFF;
   counter-reset: titre_1;
+  counter-reset: indice_tableau;
 }
 
 footer{
@@ -261,9 +262,14 @@ table {
 
 /* Titre du tableau */ 
 caption {
-  text-align: left;
-  margin-left: 1em;
-  margin-bottom: 0.5em;
+  caption-side: bottom;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+caption:before{ 
+  counter-increment: indice_tableau;
+  content: "tableau\2060\2005\2060"counter(indice_tableau)"\202f: ";
 }
 
 /* Celulles */
