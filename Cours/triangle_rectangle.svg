@@ -1,0 +1,59 @@
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  width="380"
+  height="225">
+
+  <!--
+  Triangle rectangle
+  -->
+  <path
+    id="triangle"
+    style="fill-opacity:0;stroke:currentColor"
+    d="M 0,200 h 300 v -200 l -300 200" />
+
+  <!--
+  Nom des côtés
+  -->
+  <text
+    id="label_adjacent"
+    style="font-size:10pt;font-family:Arial,sans-serif;fill:currentColor"
+    x="120"
+    y="220">côté adjacent</text>
+  <text
+    id="label_oppose"
+    style="font-size:10pt;font-family:Arial,sans-serif;fill:currentColor"
+    x="305"
+    y="100">côté opposé</text>
+  <text
+    id="label_hypotenuse"
+    style="font-size:10pt;font-family:Arial,sans-serif;fill:currentColor"
+    x="75"
+    y="100">hypoténuse</text>
+
+  <!--
+  Marqueur de l'angle theta
+    départ à 
+      x = 100*cos(arctan(200/300))
+      y = 200-100*sin(arctan(200/300))
+  -->
+  <path
+    id="arc_theta"
+    style="fill-opacity:0;stroke:currentColor;stroke-dasharray:4"
+    d="M 83.2050294338,144.529980377 A 100,100 0 0 1 100,200" />
+  <text
+    id="label_angle_theta"
+    style="font-size:10pt;font-family:Arial,sans-serif;fill:currentColor"
+    x="105"
+    y="175">&#952;</text>
+
+  <!--
+  Marqueur de l'angle droit
+  -->
+  <path
+    id="marqueur_angle_droit"
+    style="stroke:currentColor;fill-opacity:0;stroke-width:2"
+    d="M 270,200 v -30 h 30" />
+
+</svg>

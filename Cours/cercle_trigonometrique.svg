@@ -1,0 +1,138 @@
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  viewBox="-250 -250 500 500">
+
+  <defs>
+    <!--
+    Flèche ouverte pour vecteurs et axes.
+    -->
+    <marker
+      id="fleche_ouverte"
+      style="overflow:visible"
+      orient="auto-start-reverse">
+      <line
+        style="stroke:currentColor"
+        x1="0"
+        y1="0"
+        x2="-10"
+        y2="-5"/>
+      <line
+        style="stroke:currentColor"
+        x1="0"
+        y1="0"
+        x2="-10"
+        y2="5"/>
+    </marker>
+
+  </defs>
+
+  <!--
+  Cercle unité et axes
+  Le cercle est centré au point O = (0,0) et son rayon est 200 
+  -->
+  <ellipse
+    id="cercle_unite"
+    style="fill-opacity:0;paint-order:fill;stroke:currentColor"
+    cx="0"
+    cy="0"
+    rx="200"
+    ry="200" />
+  <line
+    id="axe_y"
+    style="stroke:currentColor;marker-end:url(#fleche_ouverte)"
+    x1="0"
+    y1="250"
+    x2="0"
+    y2="-250" />
+  <line
+    id="axe_x"
+    style="stroke:currentColor;marker-end:url(#fleche_ouverte)"
+    x1="-250"
+    y1="0"
+    x2="250"
+    y2="0" />
+  <text
+    id="label_point_O"
+    style="font-size:10pt;font-family:Arial,sans-serif"
+    x="-15"
+    y="15">O</text>
+
+  <!-- 
+  Vecteur OM d'angle theta = pi/6
+    x1 = Ox
+    y1 = Oy
+    x2 = Ox + rayon*cos(pi/6)
+    y2 = Oy - rayon*sin(pi/6)
+  -->
+  <line
+    id="vecteur_OM"
+    style="stroke:currentColor;marker-end:url(#fleche_ouverte)"
+    x1="0"
+    y1="0"
+    x2="173.205080757"
+    y2="-100" />
+  <text
+    id="label_point_M"
+    style="font-size:10pt;font-family:Arial,sans-serif"
+    x="175"
+    y="-105">M</text> 
+
+  <!--
+  Marqueur de l'ordonnée du point M
+    y = Oy - rayon*sin(pi/6)
+    x1 = Ox
+    x2 = Ox + rayon*cos(pi/6)
+  -->
+  <line
+    id="marqueur_ordonnee_M"
+    style="stroke:currentColor;stroke-dasharray:4;"
+    x1="0"
+    y1="-100"
+    x2="173.205080757"
+    y2="-100" />
+  <text
+    id="valeur_ordonnee_M"
+    style="font-size:10pt;font-family:Arial,sans-serif"
+    x="-70"
+    y="-95">y = sin(&#952;)</text>
+
+  <!--
+  Marqueur de l'abscisse du point M
+    x = Ox + rayon*cos(pi/6)
+    y1 = Oy
+    y2 = Oy - rayon*sin(pi/6)
+  -->
+  <line
+    id="marqueur_abscisse_M"
+    style="stroke:currentColor;stroke-dasharray:4"
+    x1="173.205080757" 
+    y1="0"
+    x2="173.205080757"
+    y2="-100" />
+  <text
+    id="valeur_abscisse_M"
+    style="font-size:10pt;font-family:Arial,sans-serif"
+    x="125"
+    y="15">x = cos(&#952;)</text>
+
+  <!--
+  Marqueur angle thetha
+    rayon = 60
+    angle = theta = pi/6
+    centre = O
+    point départ : Ox + rayon*cos(theta) , Oy - rayon*sin(theta)
+    point arrivée : Ox + rayon , Oy
+  -->
+  <path
+    id="arc_theta"
+    style="fill-opacity:0;stroke-dasharray:4;stroke:currentColor"
+    d="M 51.9615242271,-30 A 60,60 0 0 1 60,0" />
+  <text
+    id="label_angle_theta"
+    style="font-size:10pt;font-family:Arial,sans-serif"
+    x="65"
+    y="-15">&#952;</text>
+    
+</svg>

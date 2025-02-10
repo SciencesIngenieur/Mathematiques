@@ -210,7 +210,7 @@ figcaption{
 
 figcaption:before{ 
   counter-increment: indice_figure;
-  content: "figure "counter(indice_figure)" : ";
+  content: "figure\2060\2005\2060"counter(indice_figure)"\202f: ";
 }
 
 img{
@@ -219,8 +219,7 @@ img{
   margin-left: 0pt;
   margin-right: 0pt;
   padding: 0;
-  /*text-align: center;*/
-  max-width : 18cm;
+  max-width : 100%;
 }
 
 img.encadree{

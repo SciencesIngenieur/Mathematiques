@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Trigonométrie</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Trigonométrie</h1>
+
+      <h2>Définitions dans un triangle rectangle</h2>
+      
+      <div>
+        Pour définir les fonctions trigonométriques d’un angle \(\theta\), considérons un triangle
+        rectangle dont \(\theta\) est l'un des deux angles aigus.<br />
+        Les côtés du triangle rectangle sont appelés&#x202f;:<br />
+        <ul>
+          <li>l’hypoténuse&#x202f;: c’est le côté opposé à l’angle droit, constituant une jambe de
+          l’angle \(\theta\) et le côté le plus long du triangle</li>
+          <li>le côté adjacent&#x202f;: c’est le côté joignant l’angle droit depuis \(\theta\),
+          constituant une jambe de l’angle \(\theta\), qui n’est pas l’hypoténuse</li>
+          <li>le côté opposé&#x202f;: c’est le côté opposé à l’angle \(\theta\), joignant l’angle
+          droit, qui n’est pas l’hypoténuse</li>
+        </ul>
+      </div>
+
+      <figure>
+        <img src="triangle_rectangle.svg">
+        <figcaption>Triangle rectangle</figcaption>
+      </figure>
+
+      <div>
+      On notera&#x202f;:<br />
+        <ul>
+          <li>h&#x202f;: la longueur de l'hypoténuse</li>
+          <li>a&#x202f;: la longueur du côté adjacent</li>
+          <li>o&#x202f;: la longueur du côté opposé</li>
+        </ul>
+      </div>  
+      
+      <div>
+        Les différents rapports de ces trois longueurs ne dépendent pas du triangle choisi (du
+        moment qu’il comporte l’angle \(\theta\) et un angle droit) puisque tous ces triangles sont
+        semblables (ils ont la même forme, mais pas nécessairement la même taille).
+      </div>
+      
+      <div>
+        Le sinus d’un angle est le rapport de la longueur du côté opposé par la longueur de
+        l’hypoténuse.
+        $$
+          \quad \sin(\theta) = \frac{o}{h}
+        $$
+      </div>
+
+      <div>
+        Le cosinus d’un angle est le rapport de la longueur du côté adjacent par la longueur de
+        l’hypoténuse.
+        $$
+          \quad \cos(\theta) = \frac{a}{h}
+        $$
+      </div>
+      
+      <div>
+        La tangente d’un angle est le rapport de la longueur du côté opposé par la longueur du côté
+        adjacent.
+        $$
+          \quad \tan(\theta) = \frac{o}{a} = \frac{\sin(\theta)}{\cos(\theta)}
+        $$
+      </div>
+
+      <h2>Définitions à partir du cercle unité</h2>
+      
+      <div>
+        Dans un plan muni d’un repère orthonormé \( \left(O, \vec{i}, \vec {j} \right) \), le cercle
+        trigonométrique est le cercle de centre \(O\) et de rayon 1.<br />
+        Si l’on considère un point \(M\) de coordonnées \((x, y)\) sur le cercle tel que le vecteur
+        \( \overrightarrow{OM} \) forme un angle \(\theta\) avec le vecteur \( \vec{i} \), alors on
+        a&#x202f;:<br />
+        <ul>
+          <li>\( \cos( \theta ) = x \)</li>
+          <li>\( \sin( \theta ) = y \)</li>
+        </ul>
+      </div>
+
+      <figure>
+        <img src="cercle_trigonometrique.svg" width="400px">
+        <figcaption>Cercle trigonometrique</figcaption>
+      </figure>
+
+      <h2>Représentations graphiques</h2>
+
+      <figure>
+        <img src="Sinus.png">
+        <figcaption>Représentation de la fonction sinus</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Cosinus.png">
+        <figcaption>Représentation de la fonction cosinus</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Tangente.png">
+        <figcaption>Représentation de la fonction tangente</figcaption>
+      </figure>
+
+      <h2>Relations trigonométriques</h2>
+
+      <h3>Théorème de Pythagore</h3>
+
+      <div>
+        $$ \quad \cos^{2}\theta + \sin^{2}\theta = 1 $$
+      </div>
+
+      <h3>Parité</h3>
+
+      <div>
+        $$ \quad \sin( -\theta ) = - \sin( \theta ) $$
+        $$ \quad \cos( -\theta ) = \cos( \theta ) $$
+        $$ \quad \tan( -\theta ) = - \tan( \theta ) $$
+      </div>
+
+      <h3>Formules d’addition et de différence</h3>
+
+      <div>
+        Les deux formules principales sont les formules d’addition pour le cosinus et le
+        sinus&#x202f;:<br />
+        $$ \quad \cos(a+b)=\cos a\cos b-\sin a\sin b $$
+        $$ \quad \sin(a+b)=\sin a\cos b+\cos a\sin b $$
+        En remplaçant b par son opposé, on obtient aussi les formules de différence&#x202f;:<br />
+        $$ \quad \cos(a-b)=\cos a\cos b+\sin a\sin b $$
+        $$ \quad \sin(a-b)=\sin a\cos b-\cos a\sin b $$
+      </div>
+      
+      <h3>Formules de réduction du carré</h3>
+      
+      <div>
+        Ces formules permettent d’écrire le carré des fonctions trigonométriques en fonction du
+        cosinus de l’angle double&#x202f;:<br />
+        $$ \quad \cos^{2} x = \frac {1+\cos(2x)}{2} $$
+        $$ \quad \sin^{2} x = \frac {1-\cos(2x)}{2} $$
+        $$ \quad \tan^{2} x = \frac {1-\cos(2x)}{1+\cos(2x)} $$
+      </div>
+
+      <h2>Relations avec la fonction exponentielle</h2>
+
+      <h3>Formule d’Euler</h3>
+
+      <div>
+        On peut montrer à partir de la définition des séries que les fonctions sinus et cosinus sont
+        respectivement la partie imaginaire et la partie réelle de la fonction exponentielle quand
+        son argument est imaginaire pur&#x202f;:<br />
+        $$ \quad \forall x \in \mathbb{R}, \quad \cos x = \mbox{Re} ({\rm{e}}^{{\rm{i}}x} )
+          {\text{ et }}
+          \sin x = \mbox{Im}( {\rm{e}}^{{\rm{i}}x} ) $$
+        ou encore&#x202f;:<br />
+        $$ \quad {\rm{e}}^{\rm{i}x} = \cos x + \rm{i}\sin x $$
+      </div>
+
+      <div>
+        La formule d’Euler permet une interprétation des fonctions cosinus et sinus comme
+        combinaisons linéaires de fonctions exponentielles&#x202f;:<br />
+        $$ \quad \cos x = \frac{ {\rm{e}}^{{\rm{i}}x} + {\rm{e}}^{-{\rm{i}}x}}{2} = \cosh \rm{i}x $$
+        $$ \quad \sin x = \frac{ {\rm{e}}^{{\rm{i}}x} - {\rm{e}}^{-{\rm{i}}x}}{2{\rm{i}}}
+          = {\rm{i}} \sinh {\rm{i}}x $$
+      </div>
+      
+      <h3>Formule de Moivre</h3>
+      
+      <div>
+        En utilisant la formule d’Euler on démontre directement la formule de Moivre&#x202f;:<br />
+        $$ \quad \forall x \in \mathbb{R}, \forall n \in \mathbb{N},
+          \quad (\cos x + {\rm{i}} \sin x )^{n} = \cos(nx) + {\rm{i}}\sin(nx) $$
+      </div>
+      
+    </section>
+  </body>
+</html>
