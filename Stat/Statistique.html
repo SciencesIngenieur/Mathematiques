@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Statistique</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+    <section>
+      <h1>Statistique</h1>
+      <h2>Vocabulaire</h2>
+      <div>
+        La statistique est une méthode scientifique qui consiste à organiser, analyser et
+        interpréter des observations faites sur un ou des caractères (par exemple le poids, les
+        notes d’examen, etc.) des individus (par exemple des chèvres, des machines, des humains,
+        etc.) d’une population.
+      </div>
+      <div>
+        Le caratère, aussi appelé variable statistique (noté \(X\), peut être discret
+        (c’est&#x2010;à&#x2010;dire que \(X\) peut prendre un nombre fini de valeurs numériques
+        (\(X=\{x_i\}_{i=1,k}\)) ou bien continu (\(X\) peut prendre toutes les valeurs d’un
+        intervalle \([a,b]\) donné).
+      </div>
+      <div>
+        L’ensemble des observations forme une série statistique. On peut avoir une série à une
+        variable (\(X\)&#x202f;: série simple) ou une série à deux variables (\(X\) et
+        \(Y\)&#x202f;: série double), etc.
+      </div>
+      <h2>L’organisation</h2>
+      <div>
+        Avant de procéder à une analyse, le statisticien peut être amené à organiser les
+        observations. En général, on utilise un tableau statistique ou une représentation graphique.
+      </div>
+      <h3>Fonction de répartition \(F(x)\)</h3>
+      <div>
+        Soit \(X\) une variable continue. On lui associe la fonction de répartition \(F\) définie
+        par&#x202f;:<br />
+        $$
+          \forall x \in \mathbb{R}, F(x) = \text{le nombre d’observation pour lesquelles } X \lt x
+        $$
+      </div>
+      <div>
+        Soit \(X\) une variable discrète. La série est définie par des couples \((x_i,n_i)\). La
+        fonction de répartition \(F\) est donnée par&#x202f;:<br />
+        $$
+          \forall x \in \mathbb{R}, F(x) = \sum_{x_i \leqslant x } n_i
+        $$
+        C’est une fonction une escalier.
+      </div>
+      <h2>Analyse</h2>
+      <h3>Calcul des caractéristiques d’une série simple</h3>
+      <div>
+        La réprésentation graphique nous donne une première idée de la série statistique. On doit
+        ensuite calculer certaines caractéristiques pour avoir une analyse plus fine de la
+        situation.
+      </div>
+      <h4>Le mode</h4>
+      <div>
+        Le mode (ou classe modale) d’une série statistique est la valeur de la variable (ou de la
+        classe) dont l’effectif est le plus grand. Cette valeur est obtenue à partir du tableau ou
+        du graphe.<br />
+        Il peut y avoir plus d’un mode.
+      </div>
+      <h4>La médiane</h4>
+      <div>
+        La médiane, notée \(M\), est la valeur du caractère située au milieu du classement.
+        $$
+          M =
+          \begin{cases}
+             x_{j} \text{avec } j = \frac{N+1}{2} \text{si N impair} \\
+             \frac{x_{j}+x_{j+1}}{2} \text{avec } j = \frac{N}{2} \text{si N pair}
+          \end{cases}
+        $$
+        Si \(X\) est une variable continue, il convient de remplacer x_{j} par c_{j} si les largeurs
+        des classes sont identiques.
+      </div>
+      <h4>La moyenne</h4>
+      <div>
+        La moyenne d’une série, notée \(\overline{x}\), est&#x202f;:<br />
+        $$
+          \bar{x} = \frac{1}{N} \sum _{i=1}^{k}n_{i}x_{i}
+        $$
+        Si \(X\) est une variable continue, il convient de remplacer x_{i} par c_{i} si les largeurs
+        des classes sont identiques.
+      </div>
+      <h4>L’étendue</h4>
+      <div>
+        C’est l’intervalle entre la plus petite et la plus grande valeur de la série.
+      </div>
+      <h4>La variance</h4>
+      <div>
+        $$
+        Var(X) = \frac {1}{N} \sum_{i=1}^{k} n_i( x_i - \bar{x} )^2
+        $$
+      </div>
+      <h4>L’écart-type</h4>
+      <div>
+        $$
+          \sigma_X = \sqrt{Var(X)}
+        $$
+      </div>
+    </section>
+  </body>
+</html>
