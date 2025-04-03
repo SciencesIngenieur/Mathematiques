@@ -77,6 +77,7 @@ h4{
   color: black;
   font-family: "Times New Roman", serif;
   font-weight: normal;
+  font-size: 12pt;
   border-bottom: 1px solid black;
   margin: 12pt var(--marge-droite) 0 var(--marge-gauche);
   counter-reset: titre_4;
@@ -89,6 +90,7 @@ h5{
   color: black;
   font-family: "Times New Roman", serif;
   font-weight: normal;
+  font-size: 12pt;
   border-bottom: 1px dashed black;
   margin: 12pt var(--marge-droite) 0 var(--marge-gauche);
 }
