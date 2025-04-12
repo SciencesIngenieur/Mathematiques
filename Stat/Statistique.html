@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Statistique</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+    <section>
+    
+      <h1>Statistique</h1>
+      
+      <div>
+        <q>L’objet de la méthode statistique est la réduction des données. Une masse de données doit
+        être remplacée par un petit nombre de quantités représentant correctement cette masse, et
+        contenant autant que possible la totalité de l’information pertinente contenue dans les
+        données d’origine.</q>
+      </div>
+      
+      <h2>Vocabulaire</h2>
+      
+      <div>
+        La statistique est la science qui consiste à réunir des données chiffrées, à les analyser et
+        à les commenter.
+      </div>
+      
+      <div>
+        Une étude statistique s’effectue sur un ensemble appelé <b>population</b> dont les éléments
+        sont appelés <b>individus</b> et consiste à observer et étudier un même aspect sur chaque
+        individu, appelé <b>caractère</b>.
+      </div>
+      
+      <div>
+        On distingue deux types de caractères&#x202f;:
+        <ul>
+          <li><b>qualitatif</b>&#x202f;: ce sont les caractères dont les valeurs ne sont pas des
+            nombres (par exemple&#x202f;: couleur des cheveux, profession,…)</li>
+          <li><b>quantitatif</b>&#x202f;: ce sont les caractères qui prennent des valeurs
+            numériques</li>
+        </ul>
+        Un caractère quantitatif peut être&#x202f;:
+        <ul>
+          <li><b>discret</b> si les valeurs du caractère sont isolées (par exemple&#x202f;: nombre
+            d’enfants). Les valeurs d’un caractère discret sont appelées les <b>modalités</b></li>
+          <li><b>continu</b> si les valeurs du caractère sont regroupées en intervalles appelés
+            <b>classes</b> (par exemple&#x202f;: taille [1,60 1,70[, [1,70 1,80[, …). La largeur de
+            chaque intervalle s’appelle l’<b>amplitude</b></li>
+        </ul>
+      </div>
+      
+      <div>
+        On appelle <b>effectif</b> d’une valeur (respectivement d’une classe, d’une modalité) le
+        nombre d’individus possédant le caractère de cette valeur (respectivement de cette classe,
+        de cette modalité).
+      </div>
+      
+      <div>
+        On appelle <b>fréquence</b> d’une valeur (respectivement d’une classe, d’une modalité) le
+        quotient de l’effectif de cette valeur (respectivement cette classe, cette modalité ) par
+        l’effectif total de la population.<br />
+        Les fréquences sont des nombres compris entre 0 et 1, souvent exprimés en pourcentage.
+      </div>
+      
+      <div>
+        Dans la suite on considère que l’on étudie un caratère quantitatif, aussi appelé <b>variable
+        statistique</b> (noté \(X\)).
+      </div>
+      
+      <div>
+        L’ensemble des observations forme une <b>série statistique</b>. On peut avoir une série à
+        une variable (\(X\)&#x202f;: série simple) ou une série à deux variables (\(X\) et
+        \(Y\)&#x202f;: série double), etc.
+      </div>
+      
+      <h2>L’organisation</h2>
+      
+
+      <h3>Fonction de répartition \(F(x)\)</h3>
+      
+      <div>
+        Soit \(X\) une variable continue. On lui associe la fonction de répartition \(F\) définie
+        par&#x202f;:
+        $$
+          \quad \forall x \in \mathbb{R}, F(x) = \text{le nombre d’observation pour lesquelles } X \lt x
+        $$
+      </div>
+      
+      <div>
+        Soit \(X\) une variable discrète. La série est définie par des couples \((x_i,n_i)\). La
+        fonction de répartition \(F\) est donnée par&#x202f;:
+        $$
+          \quad \forall x \in \mathbb{R}, F(x) = \sum_{x_i \leqslant x } n_i
+        $$
+        C’est une fonction une escalier.
+      </div>
+      
+      <h2>Analyse d’une série simple</h2>
+
+      <div>
+        La réprésentation graphique nous donne une première idée de la série statistique. On doit
+        ensuite calculer certaines <b>caractéristiques</b> pour avoir une analyse plus fine de la
+        situation.
+      </div>
+      
+      <h3>Le mode</h3>
+      
+      <div>
+        Le mode (ou classe modale) d’une série statistique est la valeur de la variable (ou de la
+        classe) dont l’effectif est le plus grand. Cette valeur est obtenue à partir du tableau ou
+        du graphe.<br />
+        Il peut y avoir plus d’un mode.
+      </div>
+      
+      <h3>L’étendue</h3>
+      
+      <div>
+        L’étendue est l’intervalle entre la plus petite et la plus grande valeur de la série.
+      </div>
+      
+      <h3>La médiane</h3>
+      
+      <div>
+        La médiane \(M\) d’une série statistique ordonnée d’effectif \(N\) est&#x202f;:
+        <ul>
+          <li>sa valeur centrale lorsque \(N\) est impair</li>
+          <li>la demi-somme de ses deux valeurs centrales lorsque  \(N\) est pair</li>
+        </ul>
+      </div>
+      
+      <div>
+        La médiane d’une série statistique ordonnée indique le centre de la série.
+      </div>
+      
+      <div>
+        La médiane d’une série statistique est la valeur du caractère qui partage l’effectif total
+        en deux parties égales.
+      </div>
+      
+      <h3>Les quartiles</h3>
+      
+      <div>
+        Pour avoir une idée de la dispersion des valeurs, on partage la série en quatre parties de
+        même effectif. On définit ainsi les quartiles.
+      </div>
+      
+      <div>
+        Le premier quartile \(Q_1\) est la plus petite valeur du caractère pour laquelle 25&#x202f;%
+        des valeurs de la série statistique lui sont inférieures ou égales.<br />
+        Le deuxième quartile correspond à la médiane.<br />
+        Le troisième quartile \(Q_3\) est la plus petite valeur du caractère pour laquelle
+        75&#x202f;% des valeurs de la série statistique lui sont inférieures ou égales.
+      </div>
+      
+      <div>
+        L’écart interquartile est le nombre positif \(Q_3 - Q_1\)
+      </div>
+      
+      <h3>La moyenne</h3>
+      
+      <div>
+        La moyenne d’une série, notée \(\overline{x}\), est&#x202f;:
+        $$
+          \quad \bar{x} = \frac{1}{N} \sum _{i=1}^{k}n_{i}x_{i}
+        $$
+      </div>
+
+      <h3>La variance et l’écart-type</h3>
+
+      <div>
+        La variance d’une série est donnée par&#x202f;:
+        $$
+          \quad \mathrm{Var}(X) = \frac {1}{N} \sum_{i=1}^{k} n_i( x_i - \bar{x} )^2
+        $$
+        C’est la moyenne quadratique des écarts.
+      </div>
+      
+      <div>
+        Sa racine carrée s’appelle l’écart type de la série&#x202f;:
+        $$
+          \quad \sigma_X = \sqrt{\mathrm{Var}(X)}
+        $$
+        La variance étant une somme de carrés c’est une quantité positive. L’écart-type est donc
+        bien défini.<br />
+        L’écart-type a la même unité que la série étudiée.
+      </div>
+      
+      <div>
+        L’écart-type mesure la dispersion des valeurs de la série autour de la moyenne.<br />
+        Plus l’écart-type est petit, plus les valeurs de la série sont concentrées autour de la
+        moyenne.
+      </div>
+      
+      <h2>Séries statitistiques à deux variables</h2>
+      
+      <div>
+        Dans certaines situations on est amené à étudier deux caractères distincts d’une même
+        population. L’objectif principal de l’étude d’une série à deux variables (ou série double)
+        est de déterminer un éventuel lien entre les deux variables \(X\) et \(Y\).
+      </div>
+      
+      <h3>Procédé</h3>
+      
+      <div>
+        Soit une population de \(N\) individus avec deux caractères \(X=(x_i)_{i=1,N}\) et
+        \(Y=(y_i)_{i=1,N}\).<br />
+        On commence par dessiner le nuage de \(N\) points \((x_i,y_i)\).<br />
+        Le point \((\bar{x},\bar{y})\) s’appelle le <b>point moyen</b>.
+      </div>
+      
+      <div>
+        De manière générale, trois cas peuvent se présenter en ce qui concerne le profil du
+        nuage&#x202f;:
+        <ul>
+          <li>forme allongée et rectiligne</li>
+          <li>forme allongée mais non rectiligne</li>
+          <li>forme quelconque</li>
+        </ul>
+      </div>
+      
+      <div>
+        Dans cette étude on va s’intéresser au premier cas. Souvent quand la forme est allongée mais
+        non rectiligne, il est possible de se ramener au premier cas via un changement de variable
+        adéquat.
+      </div>
+      
+      <h3>La régression linéaire simple</h3>
+      
+      <div>
+        On suppose donc que le nuage de points est allongé et rectiligne. On va procéder à un
+        <b>ajustement affine</b> c’est-à-dire que l’on va chercher une droite \(D\)
+        d’équation&#x202f;:
+        $$
+          \quad y = ax + b
+        $$
+        qui sera une approximation du nuage de points.
+      </div>
+      
+      <div>
+        Pour cela on utilise la méthode des moindres carrés. L’idée est de chercher une droite \(D\)
+        telle que la somme des carrés des écarts entre les points \(M_i = (x_i,y_i)\) à \(D\) soit
+        minimale.
+      </div>
+      
+      <div>
+        Les inconnues sont donc \(a\) et \(b\). On veut rendre minimale la quantité&#x202f;:
+        $$
+          \quad q(a,b) = \sum_{i=1}^N { \left\|\overrightarrow{M_iD_i}\right\|^2 }
+        $$
+        avec \(D_i = (x_i,ax_i + b)\). D’une façon générale, pour obtenir \(a\) et \(b\), on est
+        amené à résoudre le système linéaire de deux équations suivant&#x202f;:
+        $$
+          \quad \frac{\partial q(a,b)}{\partial a}=0
+        $$
+        $$
+          \quad \frac{\partial q(a,b)}{\partial b}=0
+        $$
+        Ces équations s’appelent les <b>équations normales</b>.
+      </div>
+      
+      <div>
+        Cherchons d’abords \(b\) en fonction de \(a\). On a&#x202f;:
+        $$
+          \quad \begin{aligned}
+            \sum_{i=1}^N { \left\|\overrightarrow{M_iD_i}\right\|^2 }
+            &= \sum_{i=1}^N { (y_i -(ax_i + b))^2 } \\
+            &= Nb^2 + 2 \sum_{i=1}^N{(ax_i-y_i)b} + \sum_{i=1}^N{(y_i- ax_i)^2} \\
+            &= \alpha b^2 + \beta b + \gamma
+          \end{aligned}
+        $$
+        On a donc une expresion de second dégré en \(b\). Le minimum est atteint pour&#x202f;:
+        $$
+          \quad \boxed{ b = \frac{-\beta}{2\alpha} = \bar{y} - a\bar{x} }
+        $$
+        Et donc pour \(a\) fixé, \(b\) vérifie \(\bar{y} = a\bar{x}+b\). Ceci implique que la doite
+        \(D\) passe par le point moyen \((\bar{x},\bar{y})\).
+      </div>
+      
+      <div>
+        Maintenant, connaissant l’expression de \(b\), on cherche \(a\). On a&#x202f;:
+        $$
+          \quad \begin{aligned}
+            \sum_{i=1}^N { \left\|\overrightarrow{M_iD_i}\right\|^2 }
+            &= \sum_{i=1}^N { (y_i -(ax_i + b))^2 } \\
+            &=  \sum_{i=1}^N{ (y_i - (ax_i + \bar{y} - a\bar{x}))^2 } \\
+            &= a^2 \sum_{i=1}^N{(x_i-\bar{x})^2} -2a\sum_{i=1}^N{(y_i-\bar{y})(x_i-\bar{x})}
+              + \sum_{i=1}^N{(y_i-\bar{y})^2}
+          \end{aligned}
+        $$
+        Le minimum est atteint pour \(a\) tel que&#x202f;:
+        $$
+          \quad a = \frac{\sum_{i=1}^N{(y_i-\bar{y})(x_i-\bar{x})}}{\sum_{i=1}^N{(x_i-\bar{x})^2}}
+        $$
+      </div>
+      
+      <div>
+        Or la quantité \(\frac{1}{N} \sum_{i=1}^N{(y_i-\bar{y})(x_i-\bar{x})}\)
+        est la <b>covariance</b> de \(X\) et \(Y\), on la note \(\mathrm{cov}(X,Y)\) ou encore
+        \(\sigma_{XY}\).
+      </div>
+      
+      <div>
+        On a donc l’expression suivante de \(a\)&#x202f;:
+        $$
+          \quad \boxed{ a = \frac{\sigma_{XY}}{{\sigma_{X}}^2} }
+        $$
+      </div>
+      
+      <div>
+        La droite \(D\) ainsi obtenue est unique (car \(a\) et \(b\) sont déterminé de façon
+        unique). Cette droite s’appelle la <b>droite de régression linéaire de \(Y\) en \(X\)</b>.
+      </div>
+      
+      <div>
+        Une fois qu’on a déterminé \(a\) et \(b\), pour tout \(i\), on pose&#x202f;:
+        $$
+          \quad \widehat {y_i} = a x_i + b
+        $$
+        Cette quantité \(\widehat{y_i}\) est la <b>valeur estimée</b> de \(Y\), par la droite des
+        moindres carrés, lorsque \(X\) vaut \(x_i\).<br />
+        Quand l’ajustement est de bonne qualité, cette valeur estimée \(\widehat {y_i}\) est assez
+        proche de \(y_i\), la valeur réelle de \(Y\) lorsque \(X\) vaut \(x_i\).
+      </div>
+      
+      <h3>Coefficient de corrélation</h3>
+      
+      <div>
+        Notons que la méthode des moindres carrés peut être utilisée pour n’importe quelle série
+        double. Pour s’assurer de façon objective (et non purement visuelle) que l’ajustement est
+        valide, on calcule un autre paramètre lié à la série&#x202f;: le coefficient de corrélation.
+      </div>
+      
+      <div>
+        Outre la droite de régression de \(Y\) en \(X\), on peut aussi calculer la droite de
+        régression de  \(X\) en \(Y\). Notons cette droite \(D^{\prime}\). Si on la calcule par la
+        méthode des moindres carrés, \(D^{\prime}\) aura pour équation&#x202f;:
+        $$
+          \quad x = a^{\prime}y + b^{\prime}
+        $$
+        ou encore
+        $$
+          \quad y = \frac{1}{a^{\prime}}x -\frac{b^{\prime}}{a^{\prime}}
+        $$
+        avec
+        $$
+          \quad a^{\prime} = \frac{\sigma_{XY}}{{\sigma_{Y}}^2}
+        $$
+        et
+        $$
+          \quad b^{\prime} = \bar{x} - a^{\prime}\bar{y}
+        $$
+        Donc la droite \(D^{\prime}\) passe aussi par le point moyen \((\bar{x},\bar{y})\).
+      </div>
+      
+      <div>
+        Remarquons que les droites \(D\) et \(D^{\prime}\) sont confondues si et seulement si
+        \(a=\frac{1}{a^{\prime}}\), c’est-à-dire \(aa^{\prime}=1\).<br />
+        Dans ce cas, on dit que \(X\) et \(Y\) sont en <b>corrélation totale</b> et on a&#x202f;:
+        $$
+          \quad \left( \frac{\sigma_{XY}}{\sigma_{X}\sigma_{Y}} \right)^2 = 1
+        $$
+      </div>
+      
+      <div>
+        On définit alors le coefficient de corrélation noté \(r\) comme étant la quantitié&#x202f;:
+        $$
+          \quad r = \frac{\sigma_{XY}}{\sigma_{X}\sigma_{Y}}
+        $$
+        Cette quantité mesure le degré de dépendance entre les deux caractères.
+      </div>
+      
+      <h4>Propriétés du coefficient de corrélation linéaire</h4>
+      
+      <div>
+        \(r\) est toujours compris entre -1 et +1.
+      </div>
+      
+      <div>
+        Le coefficient directeur \(a\) (la pente) de la droite des moindres carrés vérifie&#x202f;:
+        $$
+          \quad a = \frac{\sigma_{XY}}{{\sigma_{X}}^2} = \frac{\sigma_Y}{\sigma_X}r
+        $$
+        Par conséquent \(a\) et \(r\) sont toujours de même signe.
+      </div>
+      
+      <h4>Interprétation du coefficient de corrélation linéaire</h4>
+      
+      <div>
+        Lorsque \(r\) est voisin de 0, il y a absence de corrélation entre les variables \(X\) et
+        \(Y\)&#x202f;; l’approximation du nuage de points par la droite des moindres carrés est
+        alors illégitime et il faut rejeter l’ajustement linéaire.
+      </div>
+      
+      <div>
+        Lorsque \(r\) est voisin de +1, il y a une corrélation directe entre les variables \(X\) et
+        \(Y\)&#x202f;; cela signifie que \(Y\) augmente lorsque \(X\) augmente, et que \(X\)
+        augmente lorsque \(Y\) augmente. 
+      </div>
+      
+      <div>
+        Lorsque \(r\) est voisin de -1, il y a une corrélation inverse entre les variables \(X\) et
+        \(Y\)&#x202f;; cela signifie que \(Y\) augmente lorsque \(X\) diminue, et que \(X\) diminue
+        lorsque \(Y\) augmente.
+      </div>
+
+    </section>
+  </body>
+</html>

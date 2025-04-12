@@ -1,0 +1,151 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Analyse</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+  
+    <section>
+    
+      <h1>Analyse</h1>
+    
+      <h2>Asymptotes et branches infinies</h2>
+            
+      <div>
+        Dans tout ce qui suit, on notera \(C_f\) la courbe représentative d’une fonction \(f\).
+      </div>
+      
+      <h3>Les asymptotes verticales</h3>
+
+      <div>
+        \(C_f\) admet une asymptote verticale d’équation \(x = x_0\) si 
+        $$
+          \quad \lim_{x \to x_0} f(x) = \pm \infty
+        $$
+      </div>
+      
+      <figure>
+        <img src="asymptote_verticale.svg" width="60%"/>
+        <figcaption>Tracé de la courbe \(y = \frac{1}{(x-2)}\) et de son asymptote verticale
+        \(x = 2\).</figcaption>
+      </figure>
+      
+      
+      <div>
+        Une fonction peut avoir une limite différente à gauche et à droite de \(x_0\), on notera
+        alors
+        $$
+          \quad \lim_{x \to {x_0}^+} f(x) = \pm \infty
+        $$
+        et
+        $$
+          \quad \lim_{x \to {x_0}^-} f(x) = \pm \infty
+        $$
+      </div>
+      
+      <h3>Les asymptotes horizontales</h3>
+
+      <div>
+        \(C_f\) admet une asymptote horizontale au voisinage de \(+\infty\), d’équation \(y = l\)
+        (avec \(l \in \mathbb{R}\)) si 
+        $$
+          \quad \lim_{x \to +\infty} f(x) = l
+        $$
+      </div>
+      
+      <figure>
+        <img src="asymptote_horizontale.svg" width="60%"/>
+        <figcaption>Tracé de la courbe \(y = \frac{1}{(x-2)} + 3\) et de son asymptote horizontale
+        \(y = 3\).</figcaption>
+      </figure>
+      
+      <div>
+        \(C_f\) admet une asymptote horizontale au voisinage de \(-\infty\), d’équation \(y = l\)
+        (avec \(l \in \mathbb{R}\)) si 
+        $$
+          \quad \lim_{x \to -\infty} f(x) = l
+        $$
+      </div>
+
+      <h3>Les asymptotes obliques</h3>
+      
+      <div>
+        \(C_f\) admet en \(+\infty\) une asymptotes oblique d’éqation \(y=ax + b\)
+        (\(a \in \mathbb{R}\) et \(b \in \mathbb{R}^*\)) si
+        $$
+          \quad \lim_{x \to +\infty} (f(x) -(ax+b))= 0
+        $$
+      </div>
+      
+      <figure>
+        <img src="asymptote_oblique.svg" width="60%"/>
+        <figcaption>Tracé de la courbe \(y = -\frac{1}{2}x -2 + \frac{1}{(\rm{e}^x-1)}\) et de son
+        asymptote oblique \(-\frac{1}{2}x -2\).</figcaption>
+      </figure>
+      
+      <div>
+        \(C_f\) admet en \(-\infty\) une asymptotes oblique d’éqation \(y=ax + b\)
+        (\(a \in \mathbb{R}\) et \(b \in \mathbb{R}^*\)) si
+        $$
+          \quad \lim_{x \to -\infty} (f(x) -(ax+b))= 0
+        $$
+      </div>
+      
+      <h2>Points critiques</h2>
+      
+      <div>
+        Dans ce chapitre on considère une fonction \(f : \mathbb{R} \to \mathbb{R}\).
+      </div>
+      
+      <h3>Recherche des points critiques</h3>
+      
+      <div>
+        Ce sont les points où \(f^\prime(x) = 0\).</br>
+        Ces points sont les seuls candidats possibles pour des extrema locaux.
+      </div>
+      
+      <h3>Nature des points critiques</h3>
+      
+      <h4>Test de la dérivée seconde</h4>
+      
+      <div>
+        Si \(f\) est deux fois dérivable, alors&#x202f;:
+        <ol>
+          <li>Trouver \(x_0\) tel que \(f^\prime(x_0) = 0\).</li>
+          <li>
+            Calculer \(f^{\prime\prime}(x_0)\)&#x202f;:
+            <ul>
+              <li>si \(f^{\prime\prime}(x_0) \gt 0\) alors \(f\) présente un minimum local en
+              \(x_0\)</li>
+              <li>si \(f^{\prime\prime}(x_0) \lt 0\) alors \(f\) présente un maximum local en
+              \(x_0\)</li>
+              <li>si \(f^{\prime\prime}(x_0) = 0\) alors il faut utiliser une autre méthode</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      
+      <h4>Test du signe de \(f^\prime\)</h4>
+      
+      <div>
+        Si \(f^{\prime\prime}(x_0) = 0\) ou bien si \(f\) n’est pas deux fois dérivable, on peut
+        étudier le signe \(f^\prime(x)\) autour de \(x_0\)&#x202f;:
+        <ul>
+          <li>si \(f^\prime\) passe de négatif à positif en \(x_0\) alors \(f\) présente un minimum
+          local en \(x_0\)</li>
+          <li>si \(f^\prime\) passe de positif à négatif en \(x_0\) alors \(f\) présente un maximum
+          local en \(x_0\)</li>
+          <li>si le signe de \(f^\prime\) ne change pas alors \(f\) ne présente pas d’extremum
+          local</li>
+        </ul>
+      </div>
+      
+    </section>
+  </body>
+</html>
+

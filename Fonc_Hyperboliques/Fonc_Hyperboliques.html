@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fonctions hyperboliques</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Fonctions hyperboliques</h1>
+      
+      <h2>Introduction</h2>
+
+      <div>
+        En mathématiques, on appelle fonctions hyperboliques les fonctions cosinus hyperbolique,
+        sinus hyperbolique et tangente hyperbolique.<br />
+        Elles sont utilisées en analyse pour le calcul intégral, la résolution des équations
+        différentielles mais aussi en géométrie hyperbolique.
+      </div>
+      
+      <h2>Définitions</h2>
+
+      <h3>Sinus hyperbolique</h3>
+
+      <div>
+        Le sinus hyperbolique \(\sinh\) est définie comme étant la partie impaire de la fonction
+        exponentielle&#x202f;:
+        $$
+          \quad \begin{align}
+            \mathbb{R} & \overset{\sinh}{\longrightarrow} \mathbb{R} \\
+            x & \longmapsto \frac{\mathrm{e}^x - \mathrm{e}^{-x} }{2}
+          \end{align}
+        $$
+      </div>
+      
+      <div>
+        La fonction \(\sinh\) (ou \(\mathrm{sh}\)) est une bijection de classe \(C^{\infty}\) de
+        \(\mathbb{R}\) dans \(\mathbb{R}\) strictement croissante, et impaire.
+      </div>
+
+      <figure>
+        <img src="sinh.png"/>
+        <figcaption>Graphique de la courbe \(y=\sinh(x)\).</figcaption>
+      </figure>
+      
+      <div>
+        Sa dérivée est le cosinus hyperbolique.
+      </div>
+      
+      <h3>Cosinus hyperbolique</h3>
+      
+      <div>
+        Le cosinus hyperbolique \(\cosh\) est définie comme étant la partie paire de la fonction
+        exponentielle&#x202f;:
+        $$
+          \quad \begin{align}
+            \mathbb{R} & \overset{\cosh}{\longrightarrow} [1,+\infty[ \\
+            x & \longmapsto \frac{\mathrm{e}^x + \mathrm{e}^{-x} }{2}
+          \end{align}
+        $$
+      </div>
+      
+      <div>
+        La fonction \(\cosh\) (ou \(\mathrm{ch}\)) est une application de classe \(C^{\infty}\) de
+        \(\mathbb{R}\) dans \([1,+\infty[\) strictement croissante sur \(\mathbb{R^+}\) et paire.
+      </div>
+ 
+      <figure>
+        <img src="cosh.png"/>
+        <figcaption>Graphique de la courbe \(y=\cosh(x)\).</figcaption>
+      </figure>
+
+      <div>
+        Sa dérivée est le sinus hyperbolique.
+      </div>
+      
+      <h3>Tangente hyperbolique</h3>
+      
+      <div>
+        La tangente hyperbolique \(\tanh\) est définie par
+        $$
+          \quad \begin{align}
+            \mathbb{R} & \overset{\tanh}{\longrightarrow} ]-1,1[ \\
+            x & \longmapsto \frac{\sinh(x)}{\cosh(x)}
+          \end{align}
+        $$
+      </div>
+      
+      <div>
+        La fonction \(\tanh\) (ou \(\mathrm{th}\)) est une bijection de classe \(C^{\infty}\) de
+        \(\mathbb{R}\) dans \(]-1,1[\) strictement croissante et impaire.
+      </div>
+      
+      <figure>
+        <img src="tanh.png"/>
+        <figcaption>Graphique de la courbe \(y=\tanh(x)\).</figcaption>
+      </figure>
+
+      <div>
+        Sa dérivée est \(\frac{1}{\cosh^2} = 1 - \tanh^2\).
+      </div>
+      
+      <h2>Propriétés</h2>
+      
+      <div>
+        Par construction,
+        $$
+          \quad \mathrm{e}^x = \cosh(x) + \sinh(x)
+        $$
+        et
+        $$
+          \quad \mathrm{e}^{-x} = \cosh(x) - \sinh(x)
+        $$
+        On en déduit que&#x202f;:
+        $$
+          \quad \cosh^2(x) - \sinh^2(x) = 1
+        $$
+        De même que les points \((\cos t, \sin t)\) décrivent un cercle lorsque \(t\) parcourt
+        \(\mathbb{R}\), les points \((\cosh t, \sinh t)\) décrivent une branche d’hyperbole.
+      </div>
+      
+      <div>
+        Les fonctions hyperboliques satisfont à des relations très ressemblantes aux identités
+        trigonométriques. En fait, la règle d’Osborn dit que l’on peut convertir n’importe quelle
+        identité trigonométrique en une identité hyperbolique en la développant complètement à
+        l’aide de puissances entières de sinus et cosinus, changeant \(\sin\) en \(\sinh\) et
+        \(\cos\) en \(\cosh\), et remplaçant le signe de chaque terme qui contient un produit de
+        deux sinus en son opposé.
+      </div>
+      
+      <div>
+        Des formules d’Euler, on déduit immédiatement&#x202f;:
+        $$
+          \quad \begin{align}
+            & \cos(x) = \cosh(\mathrm{i}x) \\
+            & \mathrm{i}\sin(x) = \sinh(\mathrm{i}x)
+          \end{align}
+        $$
+        ou encore&#x202f;:
+        $$
+          \quad \begin{align}
+            & \cosh(x) = \cos(\mathrm{i}x) \\
+            & \sinh(x) = -\mathrm{i}\sin(\mathrm{i}x)
+          \end{align}
+        $$
+      </div>
+       
+      <h2>Lien avec les hyperboles</h2>
+       
+      <div>
+        Le nom fonctions hyperboliques vient essentiellement du fait que les fonctions sinus et
+        cosinus hyperboliques jouent pour l’hyperbole le même rôle que les fonctions sinus et
+        cosinus circulaires pour le cercle unité.
+      </div>
+      
+      <figure>
+        <img src="Comparaison_aire_cercle_hyperbole.png" width="80%"/>
+        <figcaption>Comparaison cercle et hyperbole.</figcaption>
+      </figure>
+
+      <div>
+        Par exemple, si \(M\) est le point de coordonnées \((\cos(t),\sin(t))\) sur le cercle
+        trigonométrique (d’équation \(x^2+y^2=1\)), avec \(t \in [0,\pi/2]\), alors l’aire du
+        domaine délimité par le cercle, le segment \([OM]\) et l’axe des abscisses est égale à
+        \(t/2\).
+      </div>
+      
+      <div> 
+        De même, si \(M\) est le point de coordonnées \((\cosh(t),\sinh(t))\) sur l’hyperbole
+        d’équation \(x^2-y^2=1\), avec \(t\ge 0\), alors l’aire du domaine délimité par l’hyperbole,
+        le segment \([OM]\) et l’axe des abscisses est égale à \(t/2\).
+      </div>
+      
+    </section>
+  </body>
+</html>

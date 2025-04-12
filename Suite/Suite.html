@@ -1,0 +1,378 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Suite</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+  
+    <section>
+    
+      <h1>Suite</h1>
+
+      <h2>Notations</h2>
+
+      <div>
+        L’ensemble des suites d’éléments de \(E\) indexées par une partie \(A\) de \(\mathbb{N}\) se
+        note \(\mathcal{F}\left(A,E\right)\) ou \(E^{A}\).
+      </div>
+      
+      <div>
+        Soit \(A\) une partie de \(\mathbb{N}\). Soit \(u \in E^A\) une suite d’éléments de \(E\).
+        On note \(u_n\) l’image \(u(n)\) de l’entier \(n\) par \(u\).<br />
+        Ainsi, les images de \(0\), \(1\), \(2\), …, \(n\) sont notées \(u_0\), \(u_1\), \(u_2\),
+        …, \(u_n\).<br />
+        On dit que \(u_n\) est le terme de rang \(n\), ou d’indice \(n\) de la suite \(u\).
+      </div>
+      
+      <div>
+        On note en général la suite \(u\)&#x202f;: \((u_n)_{n \in A}\) qui est donc une
+        application.<br />
+        Lorsque \(A=\mathbb{N}\), on note plus simplement la suite&#x202f;: \((u_n)\).<br />
+        Lorsque \(A = [\![1,n]\!] = \{1,2,\dots ,n\}\), on peut noter la suite 
+        \((u_k)_{1\leq k\leq n}\) ou encore \((u_{1},u_{2},\dots ,u_{n})\).
+      </div>
+      
+      <div>
+        Il ne faut pas confondre la suite \(u=(u_n)_{n\in \mathbb{N}}\) avec l’ensemble des valeurs
+        de la suite \(\{u_{n} \mid n \in \mathbb{N} \}\) qui est l’image directe de \(\mathbb{N}\)
+        par \(u\).
+      </div>
+      
+      <h3>Terme général et récurrence</h3>
+      
+      <div>
+        Une suite étant une application de \(A\) (partie de \(\mathbb{N}\)) dans \(E\), il est
+        intéressant, voire primordial, de connaître l’image de \(n\) pour tout \(n\) de \(A\). Si 
+        \(u_n\) est donné comme expression de \(n\) et permet un calcul direct du nombre, on dit que
+        l’on connait le <b>terme général</b> de \(u_n\).
+      </div>
+      
+      <div>
+        Cependant, si \(A=\{n\in \mathbb{N} \mid n\geq n_0\}\), la nature de l’ensemble de départ
+        permet de définir la suite par une relation de récurrence&#x202f;: le terme d’indice \(n\)
+        est donné comme fonction de \(n\) et des termes d’indices \(k\), \(k\leq n\). Le principe de
+        définition par récurrence permet d’affirmer qu’il suffit alors de donner \(u_{n_0}\) pour en
+        déduire tous les termes (la suite \((u_n)_{n\geq n_0}\) est bien définie). En pratique, la
+        détermination de \(u_n\) va nécessiter le calcul de tous les termes de \(u_{n_0}\) à
+        \(u_{n-1}\).
+      </div>
+      
+      <h3>Somme des termes d’une suite</h3>
+      
+      <div>
+        Si \(E\) est un groupe additif, on note la somme des termes d’une suite&#x202f;:
+        $$
+          \quad S_n = u_0 + u_1 + \cdots +u_n = \sum _{k=0}^n u_k
+        $$
+      </div>
+      
+      <h2>Suite arithmétique</h2>
+      
+      <h3>Terme général</h3>
+      
+      <div>
+        Si \((E, +)\) est un groupe <span class="incise">ou même seulement un ensemble muni d’une
+        loi associative</span> et si \((u_{n})_{n\in \mathbb {N}}\) est une suite arithmétique de
+        \(E\) de <b>raison</b> \(r\) alors, pour tout entier naturel \(n\)&#x202f;:
+        $$
+          \quad \boxed{ u_n = u_0 + nr }
+        $$
+      </div>
+      
+      <div>
+        Plus généralement, si la suite n’est définie qu’à partir de l’indice \(n_0\) et si
+        \(n \geq p \geq n_0\) alors&#x202f;:
+        $$
+          \quad \boxed{ u_n = u_p + (n-p)r }
+        $$
+      </div>
+      
+      <div>
+        Une suite arithmétique est donc entièrement déterminée par la donnée de son premier terme
+        \(n_0\) et de sa raison \(r\).
+      </div>
+      
+      <div>
+        Réciproquement, une suite définie à partir de l’indice \(n_0\) par \(u_n = u_{n_0}
+        + (n-n_0)r\) est arithmétique de raison \(r\).
+      </div>
+      
+      <div>
+        En analyse réelle ou complexe, la suite arithmétique est donc l’aspect discret de la
+        fonction affine.
+      </div>
+      
+      <h3>Sens de variation et convergence</h3>
+      
+      <div>
+        Ce paragraphe concerne les suites arithmétiques à valeurs réelles.
+      </div>
+      
+      <div>
+        Si \(r \gt 0\), la suite est croissante.<br />
+        Si \(r \lt 0\), la suite est décroissante.<br />
+        Si \(r = 0\), la suite est constante.
+      </div>
+      
+      <div>
+        En général (si \(r\) est non nul), la suite arithmétique est divergente. Cependant elle
+        admet une limite&#x202f;:
+        <ul>
+          <li>si la raison est positive (\(r \gt 0\)), la limite est \(+\infty\)</li>
+          <li>si la raison est négative (\(r \lt 0\)), la limite est \(-\infty\)</li>
+          <li>si la raison est nulle (\(r = 0\)), la suite est constante et converge donc vers la
+            constante.</li>
+        </ul>
+      </div>
+      
+      <h3>Somme des termes</h3>
+      
+      <div>
+        Si \(E = \mathbb{R}\) ou \(\mathbb{C}\) et si \((u_n)_{n\in \mathbb{N}}\) est une suite
+        arithmétique de \(E\) alors, toute somme de termes consécutifs est égale au nombre de ces
+        termes multiplié par la moyenne des deux termes extrêmes.<br />
+        Pour la somme des \(n\) premiers termes&#x202f;:
+        $$
+          \quad \boxed{ \sum_{i=0}^{n} = (n+1)\frac{u_0+u_n}{2} = (n+1)u_0 + \frac{n(n+1)r}{2} }
+        $$
+        Dans le cas général&#x202f;:
+        $$
+          \quad \sum_{i=p}^{n} = (n-p+1)\frac{u_p+u_n}{2} = (n-p+1)\frac{2u_p+(n-p)r}{2}
+        $$
+      </div>
+      
+      <h2>Suite géométrique</h2>
+      
+      <h3>Terme général</h3>
+      
+      <div>
+        Si \(K\) est un corps commutatif <span class="incise">par exemple \(\mathbb{R}\) (corps des
+        réels) ou \(\mathbb{C}\) (corps des complexes)</span> et si \((u_n)_{n\in \mathbb{N}}\) est
+        une suite géométrique de \(K\) de raison \(q \in K\) alors, pour tout entier naturel
+        \(n\)&#x202f;:
+        $$
+          \quad \boxed{ u_n = u_0 q^n }
+        $$
+      </div>
+      
+      <div>
+        Une suite géométrique est donc entièrement déterminée par la donnée de son premier terme et
+        par sa raison \(q\).
+      </div>
+      
+      <div>
+        Une suite géométrique peut aussi être définie à partir d’un rang quelconque \(n_0\), soit,
+        pour tout \(n \geq n_0\), par&#x202f;:
+        $$
+          \quad \boxed{  u_n = u_{n_0} q^{n-n_0} }
+        $$
+        qui suit la même relation de récurrence.<br />
+        Ce cas se ramène au cas précédent en posant \(v_n = u_{n_0+n}\) qui est géométrique de même
+        raison que \(u_n\) à partir de \(v_0 = u_{n_0}\).
+      </div>
+      
+      <h3>Sens de variation et convergence</h3>
+      
+      <div>
+        Dans ce paragraphe, on supposera \(u_0\) non nul.
+      </div>
+      
+      <h4>Sens de variation</h4>
+      
+      <div>
+        Ce paragraphe concerne les suites géométriques à valeurs dans \(\mathbb{R}\).
+      </div>
+      
+      <div>
+        Si \(q \lt 0\) la suite n’est pas monotone et oscille alternativement dans les nombres
+        négatifs et positifs. Elle est dite <b>alternée</b>.
+      </div>
+      
+      <div>
+        Si \(q \in [0;1[\)&#x202f;:
+        <ul>
+          <li>si \(u_0 \gt 0\), la suite est décroissante positive</li>
+          <li>si \(u_0 \lt 0\), la suite est croissante négative</li>
+        </ul>
+      </div>
+      
+      <div>
+        Si \(q \in ]1;+\infty[\)&#x202f;:
+        <ul>
+          <li>si \(u_0 \gt 0\), la suite est croissante positive</li>
+          <li>si \(u_0 \lt 0\), la suite est décroissante négative</li>
+        </ul>
+      </div>
+      
+      <div>
+        Si \(q = 1\) la suite est constante.
+      </div>
+      
+      <h4>Convergence</h4>
+      
+      <div>
+        Pour les suite à valeurs dans \(\mathbb{R}\)&#x202f;:
+        <ul>
+          <li>si \(q \lt -1\), la suite diverge et ne possède pas de limite</li>
+          <li>si \(q = -1\), la suite diverge et possède deux valeurs d’adhérence&#x202f;: \(u_0\)
+            et \(-u_0\)</li>
+          <li>si \(|q| \lt 1\), la suite converge vers 0</li>
+          <li>si \(q = 1\), la suite est constante et converge vers \(u_0\)</li>
+          <li>si \(q \gt 1\), la suite est divergente mais possède une limite égale à&#x202f;:
+            <ul>
+              <li>\(+\infty\) pour \(u_0 \gt 0\)</li>
+              <li>\(-\infty\) pour \(u_0 \lt 0\)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        Pour les suite à valeurs dans \(\mathbb{C}\)&#x202f;:
+        <ul>
+          <li>si \(|q| \lt 1\), la suite converge vers 0</li>
+          <li>si \(|q| \gt 1\), la suite diverge</li>
+          <li>si \(q = 1\), la suite est constante et converge vers \(u_0\)</li>
+          <li>si \(q \neq 1\) et \(|q| = 1\), la suite diverge</li>
+        </ul>
+      </div>
+      
+      <h3>Croissance comparée</h3>
+      
+      <div>
+        On considère ici des suites à valeurs dans \(\mathbb{R}\).
+      </div>
+      
+      <div>
+        On démontre (par la formule du binôme ou l’inégalité de Bernoulli) que pour tout entier
+        \(n\) et tout réel \(t\) positif
+        $$
+          \quad \boxed{ (1+t)^n \geq 1+nt }
+        $$
+        Cette inégalité permet d’affirmer qu’une suite géométrique de raison \(1 + t\) et de premier
+        terme \(a\) croît plus vite qu’une suite arithmétique de raison \(a \times t\). Cependant,
+        en pratique, pour de petites valeurs de \(t\) et des valeurs raisonnables de \(n\), les deux
+        suites sont quasiment confondues. Cette approximation se justifie mathématiquement par le
+        développement limité à l’ordre  \(1\) lorsque \(t\) tend vers  \(0\)&#x202f;: \((1+t)^n = 
+        1 +nt +o(t)\) qui fournit l’approximation&#x202f;: \( (1+t)^{n}\approx 1+nt\).
+      </div>
+      
+      <h3>Somme des termes</h3>
+      
+      <div>
+        La somme des \(n + 1\) premiers termes d’une suite géométrique \((u_k)_{k \in \mathbb{N}}\)
+        de raison \(q \neq 1\) vérifie&#x202f;:
+        $$
+          \quad \boxed{ \sum_{k=0}^n u_k
+            = u_0 + \cdots + u_n
+            = u_0(1 + q + \cdots + q^n)
+            = u_0\frac{1-q^{n+1}}{1-q} }
+        $$
+      </div>
+      
+      <div>
+        Quand \(q = 1\), la suite est constante et la somme vaut \((n+1)u_0\).
+      </div>
+      
+      <div>
+        La formule se généralise à partir d’un rang \(m\) quelconque, la suite
+        \((u_{m+k})_{k \in \mathbb{N}}\) étant également géométrique. Plus généralement si la suite
+        \((u_k)\) suit une progression géométrique entre \(m \)et \(n\), qui est donc de longueur
+        \(n-m+1\), on a la formule suivante quand la raison \(q\) est différente de \(1\)&#x202f;:
+        $$
+          \quad \boxed{ \sum_{k=m}^n u_k = u_m  \frac{1-q^{n-m+1}}{1-q} }
+        $$
+      </div>
+      
+      <h2>Suite arithmético-géométrique</h2>
+      
+      <div>
+        Une suite arithmético-géométrique est une suite satisfaisant une relation de récurrence
+        affine, généralisant ainsi les définitions des suites arithmétiques et géométriques.
+      </div>
+      
+      <h3>Définition</h3>
+      
+      <div>
+        On se place dans un corps commutatif \(K\) quelconque. Une suite \((u_n)_{n\in \mathbb{N}}\)
+        à valeurs dans \(K\) est dite arithmético-géométrique s'il existe deux éléments \(a\) et
+        \(b\) de \(K\) tels que la suite vérifie la relation de récurrence suivante&#x202f;:
+        $$
+          \quad \boxed{  \forall n \in \mathbb{N}, \quad u_{n+1}=au_n + b }
+        $$
+      </div>
+      
+      <h3>Terme général</h3>
+      
+      <h4>Cas où \(a = 1\)</h4>
+      
+      <div>
+        Pour le cas \(a = 1\), on a affaire à une suite arithmétique, donc
+        $$
+          \quad \forall n \in \mathbb{N}, \quad u_n = u_0 + nb
+        $$
+      </div>
+      
+      <h4>Cas où \(a \neq 1\)</h4>
+      
+      <div>
+        On a&#x202f;:
+        $$
+          \quad \boxed{ \forall n \in \mathbb{N} \quad u_n = a^n(u_{0}-r)+r }
+        $$
+        avec
+        $$
+          \quad  r= \frac{b}{1-a}
+        $$
+      </div>
+      
+      <h3>Somme des premiers termes</h3>
+      
+      <div>
+        Si \(a \neq 1\), toujours en posant \(r = b/(1 – a)\), la somme des \(n\) premiers termes
+        est&#x202f;:
+        $$
+          \quad \boxed{ S_n = \sum_{k=0}^{n-1} u_k = (u_0-r) \frac{1-a^n}{1-a} + nr }
+        $$
+      </div>
+      
+      <h3>Convergence</h3>
+      
+      <div>
+        Le terme général et les considérations sur les suites géométriques permettent de déterminer
+        la limite d'une telle suite suivant les valeurs de \(a\) et, éventuellement, le signe de
+        \(u_0 – r\) (si \(a \neq 1\) et \(r = b/(1 – a)\)).
+      </div>
+      
+      <div>
+        Dans le cas où \(|a| \lt 1\), la limite de la suite est \(r\) quelle que soit la valeur
+        initiale. La limite d'une suite de ce type est donc indépendante des conditions initiales.
+      </div>
+      
+      <h2>Suites récurrentes linéaires à coefficients constants</h2>
+      
+      <div>
+        Une suite récurrente linéaire est définie par une relation de récurrence&#x202f;:
+        $$
+          \quad \boxed{ u_{n+p} = a_0u_n + a_1u_{n+1} + \cdots + a_{p-1}u_{n+p-1} }
+        $$
+        où \(a_0\), \(a_1\), …, \(a_{p-1}\) sont \(p\) scalaires (\(a_0 \neq 0\)).
+      </div>
+      
+      <div>
+        L’entier \(p\) est appelé l’ordre de la récurrence. Les suites à récurrence linéaire d’ordre
+        \(1\) sont les suites géométriques&#x202f;; une suite récurrente linéaire d’ordre \(2\)
+        célèbre est la suite de Fibonacci. L’étude des suites récurrentes linéaires d’ordre \(p\)
+        fait appel à la notion d’espace vectoriel et au calcul matriciel, et on dispose de méthodes
+        permettant le calcul du terme général de n’importe quelle suite de ce type.
+      </div>
+      
+    </section>
+  </body>
+</html>
+

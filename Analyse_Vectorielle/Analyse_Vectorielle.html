@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Analyse vectorielle</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+  
+    <section>
+    
+      <h1>Analyse vectorielle</h1>
+    
+      <h2>Champ de scalaires</h2>
+      
+      <h3>Définitions</h3>
+      
+      <div>
+        Un champ de scalaires (par exemple un champ de températures) est défini en un point \(M\) et
+        à un instant donné \(t\) par&#x202f;:
+        $$
+          \quad \begin{align}
+            \mathbb{R}^4 & \overset{V}{\longrightarrow} \mathbb{R} \\
+            (M,t) & \longrightarrow V(M,t)
+          \end{align}
+        $$
+      </div>
+      
+      <div>
+        Un champ de scalaires est uniforme s’il est indépendant du point \(M\), ce qui se
+        note&#x202f;:
+        $$ 
+          \quad \frac{\partial V}{\partial M} = 0
+        $$
+        En coordonnées cartésiennes cela donne&#x202f;:
+        $$
+          \quad \frac{\partial V}{\partial x} = \frac{\partial V}{\partial y} 
+          = \frac{\partial V}{\partial z} = 0
+        $$
+      </div>
+      
+      <div>
+        Un champ de scalaires est stationnaire (ou permanent) s’il  garde la même valeur en un point
+        \(M\) donné au cours du temps, ce qui se note&#x202f;:
+        $$ 
+          \quad \frac{\partial V}{\partial t} = 0
+        $$
+      </div>
+      
+      <h3>Surface de niveau</h3>
+      
+      <div>
+        Une surface de niveau de \(V\) est un ensemble de points \(M\) pour lesquels \(V(M,t)\)
+        conserve la même valeur à un instant \(t\) fixé.<br /> 
+        En dimension 2, cet ensemble donne une courbe de niveau.
+      </div>
+      
+      
+      <h2>Champ de vecteurs</h2>
+      
+      <h3>Définitions</h3>
+      
+      <div>
+        Un champ de vecteurs (par exemple un champ de forces) est défini en un point \(M\) et à un
+        instant donné \(t\) par&#x202f;:
+        $$
+          \quad \begin{align}
+            \mathbb{R}^4 & \overset{\overrightarrow{A}}{\longrightarrow} \mathbb{R}^3 \\
+            (M,t) & \longrightarrow \overrightarrow{A(M,t)}
+          \end{align}
+        $$
+      </div>
+      
+      <figure>
+        <img src="champ_vecteurs.png">
+        <figcaption>Exemple de champ de vecteurs</figcaption>
+      </figure>
+      
+      <h3>Vocabulaire</h3>
+      
+      <h4>Champ de vecteurs uniforme</h4>
+      
+      <div>
+        Un champ de vecteurs est uniforme s’il est indépendant du point \(M\), ce qui se
+        note&#x202f;:
+        $$
+          \quad \frac{\partial \overrightarrow{A}}{\partial M} = \overrightarrow{0}
+        $$
+        En coordonnées cartésiennes cela donne&#x202f;:
+        $$
+          \quad \frac{\partial \overrightarrow{A}}{\partial x}
+          = \frac{\partial \overrightarrow{A}}{\partial y} 
+          = \frac{\partial \overrightarrow{A}}{\partial z} = \overrightarrow{0}
+        $$
+        Avec \( \frac{\partial \overrightarrow{A}}{\partial x}
+          = \left( 
+              \begin{matrix} 
+                \frac{\partial A_x}{\partial x} \\ 
+                \frac{\partial A_y}{\partial x}  \\
+                \frac{\partial A_z}{\partial x} 
+              \end{matrix} 
+            \right) \)
+      </div>
+      
+      <h4>Champ de vecteurs stationnaire</h4>
+      
+      <div>
+        Un champ de vecteurs est stationnaire (ou permanent) s’il  garde la même valeur en un point
+        \(M\) donné au cours du temps, ce qui se 
+        note&#x202f;:
+        $$
+          \quad \frac{\partial \overrightarrow{A}}{\partial t} = \overrightarrow{0}
+        $$
+        En coordonnées cartésiennes cela donne&#x202f;:
+        $$
+          \quad \frac{\partial \overrightarrow{A}}{\partial t} =
+            \left(
+              \begin{matrix}
+                \frac{\partial A_x}{\partial t} \\ 
+                \frac{\partial A_y}{\partial t}  \\
+                \frac{\partial A_z}{\partial t}
+              \end{matrix}
+            \right)
+            = \overrightarrow{0}
+        $$
+      </div>
+      
+      <h3 id="lignes_de_champ">Lignes de champ</h3>
+      
+      <div>
+        À un instant \(t\) fixé, une ligne de champ relie les points \(M\) tels que le champ
+        \(\overrightarrow{A(M,t)}\) soit tangent à la ligne. On l’oriente dans le sens du champ.
+      </div>
+      
+      <figure>
+        <img src="ligne_champ.svg">
+        <figcaption>Exemple de ligne de champ</figcaption>
+      </figure>
+      
+      <div>
+        Les lignes de champ ne se croisent jamais, sauf&#x202f;:
+        <ul>
+          <li>là où le champ est nul</li>
+          <li>là où le champ n’est pas défini</li>
+        </ul>
+        Ces points sont appelés points singuliers. Une ligne de champ sans point singulier ne peut
+        pas être une courbe fermée.
+      </div>
+      
+      <h3>Cartes de champ</h3>
+      
+      <div>
+        Un ensemble de lignes de champ passant par un réseau de points donnés constitue une carte de
+        champ.
+      </div> 
+      
+      <h3>Tubes de champ</h3>
+      
+      <div>
+        L’ensemble des lignes de champ qui s’appuient sur un contour fermé \(\gamma\) constitue un
+        tube de champ (c’est donc une surface). 
+      </div>
+      
+      <figure>
+        <img src="tube_champ.svg">
+        <figcaption>Exemple de tube de champ</figcaption>
+      </figure>
+      
+      <h3>Circulation d’un champ de vecteurs</h3>
+      
+      <div>
+        On définit la circulation d’un champ de vecteur à un instant \(t\) si le champ n’est pas
+        stationnaire.
+      </div>
+      
+      <div>
+        Considérons un déplacement élémentaire \(\overrightarrow{\mathrm{d}M}\) à partir du point
+        \(M\).
+      </div>
+      
+      <figure>
+        <img src="circulation_elementaire.svg">
+      </figure>
+      
+      <div>
+        Par définition, la circulation élémentaire du champ de vecteurs \(\overrightarrow{A(M,t)}\)
+        le long de ce déplacement élémentaire est&#x202f;:
+        $$
+          \quad \delta \mathcal{C} = \overrightarrow{A(M,t)}\cdot \overrightarrow{\mathrm{d}M}
+        $$
+      </div>
+      
+      <div>
+        Considérons la circulation d’un champ le long d’une courbe orientée \(\gamma\) du point
+        \(M_1\) au point \(M_2\) par déplacements successifs \(\overrightarrow{\mathrm{d}M}\) le
+        long de \(\gamma\), dans le sens positif de la circulation.
+      </div>
+      
+      <figure>
+        <img src="circulation.svg">
+      </figure>
+      
+      <div>
+        La circulation d’un champ de vecteurs le long du contour orienté \(\gamma\)
+        est&#x202f;:
+        $$
+          \quad \mathcal{C}^{\gamma}_{M_1 \rightarrow M_2}
+          = \int_{ M_1 }^{ M_2 }{ \overrightarrow{A(M,t)}\cdot \overrightarrow{\mathrm{d}M} }
+        $$
+         En général, la circulation d’un champ de vecteurs entre deux points \(M_1\) et \(M_2\)
+         dépend du chemin suivi.
+      </div>
+      
+      <div>
+        On a en conséquence \( \mathcal{C}^{\gamma}_{M_1 \rightarrow M_2}
+        = -\mathcal{C}^{\gamma}_{M_2 \rightarrow M_1} \).
+      </div>
+      
+      <div>
+        Si le contour \(\gamma\) est fermé, on note&#x202f;:
+        $$
+          \quad \mathcal{C}^{\gamma}
+            =\oint_{\gamma}{\overrightarrow{A(M,t)}\cdot\overrightarrow{\mathrm{d}M}}
+        $$
+      </div>
+      
+      <h3>Flux d’un champ de vecteurs</h3>
+      
+      <div>
+        On définit le flux d’un champ de vecteur à un instant \(t\) si le champ n’est pas
+        stationnaire. 
+      </div>
+      
+      <h4>Flux d’un champ de vecteurs à travers une surface élémentaire</h4>
+      
+      <div>
+        Considérons une surface élémentaire \(\mathrm{d}\mathcal{S}\) autour d’un point \(M\). Cette
+        surface est limitée par un contour élémentaire fermé \(\gamma\) dont l’orientation détermine
+        celle du vecteur surface \(\overrightarrow{\mathrm{d}\mathcal{S}}\) (de norme
+        \(\mathrm{d}\mathcal{S}\) orthogonal à l’élément de surface). 
+      </div>
+      
+      <figure>
+        <img src="flux_elementaire.svg">
+      </figure>
+    
+      <div>
+        Le flux élémentaire du champ \(\overrightarrow{A(M,t)}\) à travers \(\mathrm{d}\mathcal{S}\)
+        est la grandeur orientée&#x202f;:
+        $$
+          \quad \mathrm{d}\Phi= \overrightarrow{A(M,t)} \cdot \overrightarrow{\mathrm{d}\mathcal{S}}
+        $$
+      </div>
+    
+      <h4>Flux d’un champ de vecteurs à travers une surface finie</h4>
+    
+      <div>
+        Si la surface s’appuie sur un contour fermé \(\gamma\) orienté, on a par
+        définition&#x202f;:
+        $$
+          \quad \Phi_{\mathcal{S}} =
+          \iint_{\mathcal{S}}{ \overrightarrow{A(M,t)} \cdot \overrightarrow{\mathrm{d}\mathcal{S}}}
+        $$
+        Ce flux dépend de la surface \(\mathcal{S}\) choisie s’appuyant sur \(\gamma\). Les vecteurs
+        surface élémentaires sont orientés dès que le contour l’est.
+      </div>
+      
+      <div>
+        Si la surface est fermée, tous les vecteurs surfaces élémentaires sont orientés par
+        convention de l’intérieur vers l’extérieur, et on note&#x202f;:
+        <!--
+        $$
+          \Phi_{\mathcal{S}} =
+            \oiint_{ \mathcal{S} }{  \overrightarrow{A(M,t)} \cdot \overrightarrow{d\mathcal{S}} }
+        $$
+        -->
+        $$
+          \quad \Phi_{\mathcal{S}} =
+          \bigcirc \!\!\!\!\!\!\!\!\iint_{ \mathcal{S} }
+            { \overrightarrow{A(M,t)} \cdot \overrightarrow{\mathrm{d}\mathcal{S}} }
+        $$
+      </div>
+    
+      <h2>Les opérateurs linéaires</h2>
+      
+      <h3>Opérateur formel nabla</h3>
+      
+      <div>
+        L’opérateur nabla \(\nabla\) tire son nom d’une lyre antique qui avait la même forme de
+        triangle pointant vers le bas. Il s’agit d'un opérateur formel de \(\mathbb{R}^3\) défini en
+        coordonnées cartésiennes par&#x202f;:
+        $$
+          \quad \overrightarrow\nabla =
+            \left( 
+              \begin{matrix} 
+                \frac{\partial}{\partial x}  \\
+                \frac{\partial}{\partial y}  \\
+                \frac{\partial}{\partial z}  
+              \end{matrix}
+            \right) 
+        $$
+      </div>
+      
+      <div>
+        On écrit \(\overrightarrow\nabla\) pour souligner que formellement, l’opérateur nabla a les
+        caractéristiques d’un vecteur. Il ne contient certes pas de valeurs scalaires, mais on va
+        utiliser ses éléments constitutifs (que l’on peut voir comme des opérations en attente 
+        d’argument &mdash;&#x2060;&#x2005;&#x2060;des opérateurs différentiels) très exactement
+        comme on aurait utilisé les valeurs scalaires composant un vecteur.<br />
+        La notation nabla fournit un moyen commode pour exprimer les opérateurs vectoriels en
+        coordonnées cartésiennes.
+      </div>
+      
+      <h3>Gradient</h3>
+      
+      <h4>Définition</h4>
+      
+      <div>
+        L’opérateur gradient est un opérateur différentiel qui s’applique à un champ de scalaire
+        \(V(M,t)\) et le transforme en un champ vectoriel.
+      </div>
+      
+      <div>
+        En coordonnées cartésiennes, le gradient d’un champ de scalaires \(V\) a pour
+        expression&#x202f;:
+        $$
+          \quad \overrightarrow{\mathrm{grad}}(V) = \overrightarrow{\nabla}(V) = 
+          \left(
+            \begin{matrix} 
+              \frac{\partial V}{\partial x}  \\
+              \frac{\partial V}{\partial y}  \\
+              \frac{\partial V}{\partial z}  
+            \end{matrix}
+          \right)
+        $$
+      </div>
+      
+      <h4 id="proprietes_gradient">Propriétés</h4>
+      
+      <div>
+        Soient \(V_1\) et \(V_2\) deux champs scalaires et \(\alpha\) et \(\beta\) deux réels. 
+      </div>
+      
+      <div>
+        L’opérateur gradient est un opérateur linéaire et vérifie donc&#x202f;:
+        $$
+          \quad \overrightarrow{\nabla}\left( \alpha V_1 + \beta V_2 \right) =
+            \alpha \overrightarrow{\nabla}(V_1) + \beta \overrightarrow{\nabla}(V_2) 
+        $$
+      </div>
+      
+      <div>
+        Le gradient d’un produit de champs scalaires vaut&#x202f;:
+        $$
+        \quad \overrightarrow{\nabla}\left( V_1 \cdot V_2 \right) =V_1\overrightarrow{\nabla}(V_2)
+          + V_2\overrightarrow{\nabla}(V_1)
+        $$
+      </div>
+      
+      <h4>Lien avec la différentielle</h4>
+      
+      <div>
+        On peut définir le gradient à partir de sa relation avec la différentielle.<br />
+        Soit \(M\) un point de l’espace et \(M'\) un point infiniment voisin, la différentielle
+        \(\mathrm{d}V\) représente la variation du champ scalaire \(V\) lorsque l’on se déplace de
+        \(M\) à \(M'\) à \(t\) fixé&#x202f;:
+        $$
+          \quad \mathrm{d}V \overset{def}{=} V(M',t) - V(M,t) = \overrightarrow{\nabla}(V) \cdot
+          \overrightarrow{\mathrm{d}M}
+        $$
+      </div>
+      
+      <div>
+        En conséquence&#x202f;:
+        <ol>
+          <li>Le vecteur \( \overrightarrow{\nabla}V(M,t) \) est perpendiculaire à la surface de
+            niveau de \(V\) passant par \(M\) à l’instant \(t\).</li>
+          <li>Le vecteur gradient est orienté vers les valeurs croissantes de \(V\) et sa norme
+            mesure le taux de variation spatiale dans la direction de plus grande pente&#x202f;:
+            \( \| \overrightarrow{\nabla}(V) \| = \frac{\mathrm{d}V}{\mathrm{d}M}\)</li>
+        </ol>
+      </div>
+      
+      <h3>Rotationnel</h3>
+      
+      <h4>Définition</h4>
+      
+      <div>
+        L’opérateur rotationnel est un opérateur différentiel qui transforme un champ vectoriel en
+        un autre champ vectoriel.
+      </div>
+
+      <div>
+        En coordonnées cartésiennes, le rotationnel d’un champ de vecteurs \(\overrightarrow{A}\)
+        a pour expression&#x202f;:
+        $$
+          \quad \overrightarrow{\mathrm{rot}}\left(\overrightarrow{A}\right) 
+          = \overrightarrow{\nabla} \wedge \overrightarrow{A}
+          = \left(
+              \begin{matrix} 
+                \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \\
+                \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \\
+                \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y}
+              \end{matrix}
+            \right) 
+          
+        $$
+      </div>
+      
+      <h4>Propriétés</h4>
+      
+      <div>
+        L’opérateur rotationnel étant linéaire, on a&#x202f;:
+        $$
+          \quad \overrightarrow{\mathrm{rot}}\left(
+            \alpha \overrightarrow{A} + \beta \overrightarrow{B} \right) =
+            \alpha \overrightarrow{\mathrm{rot}} \overrightarrow{A}
+            + \beta \overrightarrow{\mathrm{rot}} \overrightarrow{B} 
+        $$
+      </div>
+      
+      <div>
+        Le rotationnel d’un gradient est nul.
+        $$
+          \quad \overrightarrow{ \mathrm{rot} } \left( 
+            \overrightarrow{ \mathrm{grad} } \left( V \right)
+          \right)
+          = \overrightarrow{\nabla} \wedge \overrightarrow{\nabla}(V)
+          = \overrightarrow{0}
+        $$
+      </div>
+      
+      <h4>Interprétation physique</h4>
+      
+      <div>
+        Le rotationnel permet de quantifier le caractère tourbillonnaire d’un champ au voisinage
+        d’un point.
+      </div>
+
+      <h4>Théorème de Stokes</h4>
+      
+      <div>
+        La circulation sur un contour fermé et orienté d’un champ de vecteurs est egal au flux du
+        rotationel de ce champ de vecteurs à travers n’importe quelle surface qui s’appuie sur ce
+        contour.
+        $$
+          \quad \oint_{M \in \gamma}{ \overrightarrow{A}(M) \cdot \overrightarrow{\mathrm{d}M} } =
+            \iint_{\mathcal{M \in S}}
+            { \overrightarrow{\mathrm{rot}} \left(\overrightarrow{A}(M) \right)
+              \cdot \overrightarrow{\mathrm{d}\mathcal{S}} }
+        $$
+        avec \(\overrightarrow{\mathrm{d}\mathcal{S}}\) orienté à partir du sens de parcours de
+        \(\gamma\) et de la règle du tire-bouchon.
+      </div>
+
+      <h3>Divergence</h3>
+      
+      <h4>Définition</h4>
+      
+      <div>
+        L’opérateur divergence est un opérateur différentiel qui s’applique à un champ vectoriel et
+        qui renvoie un champ scalaire.
+      </div>
+      
+      <div>
+        En coordonnées cartésiennes, la divergence d’un champ de vecteurs \(\overrightarrow{A}\)
+        a pour expression&#x202f;:
+        $$
+          \quad \mathrm{div}\left(\overrightarrow{A}\right)
+          = \overrightarrow{\nabla} \cdot \overrightarrow{A}
+          =   \frac{\partial A_x}{\partial x} 
+            + \frac{\partial A_y}{\partial y}
+            + \frac{\partial A_z}{\partial z}
+          
+        $$
+      </div>
+      
+      <h4>Propriétés</h4>
+      
+      <div>
+        L’opérateur divergence étant linéaire, on a&#x202f;:
+        $$
+          \quad \mathrm{div}\left(
+            \alpha \overrightarrow{A} + \beta \overrightarrow{B} \right) =
+            \alpha \mathrm{div} \overrightarrow{A}
+            + \beta\mathrm{div} \overrightarrow{B} 
+        $$
+      </div>
+      
+      <div>
+        La divergence d’un produit vaut&#x202f;:
+        $$
+          \quad \mathrm{div} \left( V \cdot \overrightarrow{A} \right)
+            = \overrightarrow{\nabla} \cdot \left( V \cdot \overrightarrow{A} \right)
+            = V \overrightarrow{\nabla} \cdot \overrightarrow{A}
+              + \overrightarrow{A} \cdot \overrightarrow{\nabla} V
+            = V \mathrm{div}\left(\overrightarrow{A} \right)
+              + \overrightarrow{A} \cdot \overrightarrow{\mathrm{grad}}(V)
+        $$
+      </div>
+      
+      <div>
+        La divergence d’un rotationnel est nulle.
+        $$
+          \quad \mathrm{div}\left(
+            \overrightarrow{ \mathrm{rot} } \left( \overrightarrow{A} \right)
+          \right)
+          = 0
+        $$
+      </div>
+      
+      <h4>Interprétation physique</h4>
+      
+      <div>
+        L’opérateur divergence est un outil d’analyse vectorielle qui mesure si un champ vectoriel
+        <q>rentre</q> ou <q>sort</q> d’une zone de l’espace.
+      </div>
+
+      <h4 id="theoreme_divergence">Théorème de Green-Ostrogradski</h4>
+      
+      <div>
+        Le flux d’un champ de vecteur à travers une surface fermée est égal à l’intégrale de la
+        divergence du champ de vecteur sur le volume interieur à cette surface fermée.
+        $$
+          \quad \bigcirc \!\!\!\!\!\!\!\!\iint_{ \mathcal{S} }
+            { \overrightarrow{A(M,t)} \cdot \overrightarrow{\mathrm{d}\mathcal{S}} } =
+          \iiint_{ \mathcal{V} } \mathrm{div}\left(\overrightarrow{A}\right) \mathrm{d}v
+        $$
+      </div>
+      
+      <h3>Laplacien</h3>
+      
+      <h4>Laplacien scalaire</h4>
+      
+      <div>
+        Le laplacien d’un champ scalaire mesure la différence entre la valeur du champ en un point
+        et sa moyenne autour de ce point.<br />
+        De cette façon, le laplacien est nul lorsque la moyenne autour d’un point vaut la valeur en
+        ce point. 
+      </div>
+      
+      <div>
+        Le laplacien est défini par l’application de l’opérateur gradient suivie de l’application de
+        l’opérateur divergence&#x202f;:
+        $$
+          \quad \Delta\left(V\right) = \mathrm{div}\left(
+            \overrightarrow{\mathrm{grad}}\left(V\right)
+            \right)
+        $$
+      </div>
+      
+      <div>
+        En coordonnées cartésiennes, le laplacien d’un champ de scalaires  \(V\) a pour
+        expression&#x202f;:<br />
+        $$
+          \quad \Delta\left(V\right) = 
+            \frac{\partial^2 V_x}{\partial x^2} 
+            + \frac{\partial^2 V_y}{\partial y^2}
+            + \frac{\partial^2 V_z}{\partial z^2}
+          = \overrightarrow{\nabla}^2\left(V\right)
+        $$
+      </div>
+      
+      <h4>Laplacien vectoriel</h4>
+      
+      <div>
+        Le laplacien s’applique également à un champ vectoriel. Dans ce cas il renvoie un autre
+        champ vectoriel.<br />
+        Par définition, le laplacien vectoriel s’obtient à l’aide de l’identité&#x202f;:
+        $$
+          \quad \overrightarrow{\mathrm{rot}}\left( 
+            \overrightarrow{\mathrm{rot}}\left( \overrightarrow{A} \right)
+          \right) = 
+          \overrightarrow{\mathrm{grad}}\left(  
+            \mathrm{div}\left( \overrightarrow{A} \right)
+          \right)
+          - \Delta\left( \overrightarrow{A} \right)
+        $$
+      </div>
+      
+      <div>
+        Dans un espace euclidien, le laplacien vectoriel se définit le plus simplement en se plaçant
+        dans un système de coordonnées cartésiennes. Dans ce cas, le laplacien vectoriel d’un champ
+        de vecteurs quelconque \(\overrightarrow{A}\) a pour composantes le laplacien des
+        composantes de \(\overrightarrow{A}\).
+        $$
+          \quad \Delta\left( \overrightarrow{A} \right) =
+          \left(
+              \begin{matrix} 
+                 \Delta\left(A_x\right) \\
+                 \Delta\left(A_y\right) \\
+                 \Delta\left(A_z\right)
+              \end{matrix}
+            \right) 
+        $$
+      </div>
+
+      <h3>Théorème de Helmholtz</h3>
+
+      <div>
+        Un champ vectoriel se décompose en une composante <q>longitudinale</q> (irrotationnelle) et
+        une composante <q>transverse</q> (solénoïdale), soit la somme du gradient d’un champ
+        scalaire et du rotationnel d’un champ vectoriel.
+      </div>
+      
+      <div>
+        Soit \(\overrightarrow{U}\) un champ vectoriel, alors il existe un champ vectoriel 
+        \(\overrightarrow{A}\) et un champ scalaire \(V\) tels que&#x202f;:
+        $$
+          \quad \overrightarrow{U} = \overrightarrow{\mathrm{rot}}\left(\overrightarrow{A}\right)
+           - \overrightarrow{\mathrm{grad}}\left(V\right)
+        $$
+      </div>
+      
+    </section>
+  </body>
+</html>
+

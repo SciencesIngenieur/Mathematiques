@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fonctions polynomiales</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Fonctions polynomiales</h1>
+
+      <div>
+        En mathématiques, une fonction polynomiale (parfois appelée fonction polynôme) est une
+        fonction obtenue en évaluant un polynôme.
+      </div>
+      
+      <div>
+        Par abus de langage, on appelle parfois une fonction polynomiale un polynôme, confondant
+        ainsi la notion de fonction polynomiale avec celle de polynôme formel.
+      </div>
+      
+      <h2>Fonctions polynomiales réelles ou complexes</h2>
+      
+      <h3>Définitions</h3>
+      
+      <div>
+        On considère le polynôme \(P\) de la forme&#x202f;:
+        $$
+          \quad P = \sum_{k=0}^{n} a_kX^k = a_nX^n + a_{n-1}X^{n-1} + \cdots + a_1X + a_0
+        $$
+        où les \(a_k\) sont des nombres réels ou des nombres complexes.<br />
+        La fonction polynomiale \(f\) associée est alors définie par&#x202f;:
+        $$
+          \quad f(x) = \sum_{k=0}^{n} a_kx^k = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0
+        $$
+        où la variable \(x\) peut être elle-même réel ou complexe.
+      </div>
+      
+      <div>
+        Les fonctions polynomiales les plus courantes (avec \(a_n \neq 0\)) sont&#x202f;:
+        <ul>
+          <li>les fonctions constantes correspondant à \(n = 0\)</li>
+          <li>les fonctions affines correspondant à \(n = 1\)</li>
+          <li>les fonctions quadratiques (aussi appelées fonctions du second degré) correspondant à
+            \(n = 2\)</li>
+          <li>les fonctions cubiques correspondant à \(n = 3\)</li>
+         </ul>
+      </div>
+      
+      <div>
+        Dans le cadre des fonctions polynomiales réelles ou complexes, on définit le degré d’une
+        fonction polynomiale comme le degré du polynôme auquel elle est associée (avec la convention
+        que le degré vaut \(-\infty\) si la fonction est nulle).
+      </div>
+      
+      <div>
+        Puisqu’un polynôme réel ou complexe non constant de degré \(n\) a au plus \(n\) racines
+        d’après le théorème de d’Alembert-Gauss, on en déduit qu’une fonction polynomiale réelle ou
+        complexe non constante de degré \(n\) a au plus \(n\) zéros.<br />
+        Autrement dit, deux fonctions polynomiales réelles ou complexes de degrés inférieurs ou
+        égaux à \(n\) et coïncidant sur plus de \(n\) points sont nécessairement identiques
+        (c’est-à-dire qu’elles ont même degré et mêmes coefficients).
+      </div>
+      
+      <h3>Opérations</h3>
+      
+      <div>
+        La somme, la différence et le produit de deux fonctions polynomiales est une fonction
+        polynomiale.
+      </div>
+      
+      <div>
+        Le degré du produit de deux fonctions polynomiales est la somme des degrés de ces deux
+        fonctions.
+      </div>
+      
+      <h3>Dérivées</h3>
+      
+      <div>
+        La fonction polynomiale \(f\) réelle ou complexe est infiniment dérivable et la
+        k<sup>ième</sup> dérivée de \(f\) est exactement la fonction polynomiale associée à la
+        k<sup>ième</sup> dérivée formelle de \(P\). En particulier, les dérivées d’ordre \(k \gt n\)
+        de fonctions polynomiales de degré \(n\) sont identiquement nulles.
+      </div>
+      
+      <div>
+        Cas où \(k \le n\)&#x202f;:
+        $$
+          \quad f^k(x) = \sum_{i=k}^{n} \frac{i!}{(i-k)!}a_ix^{i-k}
+        $$
+      </div>
+      
+      <div>
+        Cas où \(k \gt n\)&#x202f;:
+        $$
+          \quad f^k(x) = 0
+        $$
+      </div>
+      
+      <div>
+        Par exemple, la dérivée de \(f\) est donnée par&#x202f;:
+        $$
+          \quad f'(x) = na_nx^{n-1} + (n-1)a_{n-1}x^{n-2} + \cdots + 2a_2x + a_1
+        $$
+      </div>
+      
+      <h3>Primitives</h3>
+      
+      <div>
+        De même, les primitives de \(f\) sont exactement les fonctions polynomiales associées aux
+        primitives formelles de \(P\), c’est-à-dire de la forme&#x202f;:
+        $$
+          \quad  x \mapsto \frac{a_{n}}{n+1}x^{n+1} + \frac{a_{n-1}}{n}x^{n} + \cdots 
+          + \frac {a_{1}}{2}x^{2} + a_{0}x + C
+        $$
+        où \(C\) est une constante réelle ou complexe arbitraire.
+      </div>
+      
+      <h2>Fonction constante</h2>
+      
+      <h3>Définition</h3>
+      
+      <div>
+        Une fonction constante est une fonction qui ne prend qu’une seule valeur, indépendamment de
+        sa variable.
+      </div>
+      
+      <h3>Propriétés</h3>
+      
+      <div>
+        Une fonction polynomiale constante d’une variable réelle est représentée par une droite
+        parallèle à l’axe des abscisses.
+      </div>
+      
+      <figure>
+        <img src="constante.png" width="50%">
+        <figcaption>Graphique de la fonction constante \(f(x) = 10 \).</figcaption>
+      </figure>
+      
+      <div>
+        La dérivée d’une fonction polynomiale constante est nulle.
+      </div>
+      
+      <h2>Fonction affine</h2>
+      
+      <h3>Définition</h3>
+      
+      <div>
+        Les fonctions affines sont des fonctions polynomiales de degré inférieur ou égal à 1.
+      </div>
+      
+      <div>
+        Une fonction affine est une fonction obtenue par addition et multiplication de la variable
+        par des constantes. Elle peut donc s’écrire sous la forme&#x202f;:
+        $$
+          \quad f(x) = ax + b
+        $$
+        où les paramètres \(a\) et \(b\) ne dépendent pas de \(x\).
+      </div>
+      
+      <div>
+        Lorsque la fonction est définie sur l’ensemble des réels, elle est représentée par une
+        droite, dont \(a\) est la pente et \(b\) l’ordonnée à l’origine.
+      </div>
+      
+      <h3>Propriété caractéristique</h3>
+      
+      <div>
+        Une fonction affine \(f\) est caractérisée par le fait que son taux d’accroissement est
+        constant. C’est-à-dire qu’il y a proportionnalité entre les accroissement de \(x\) et les
+        accroissement de \(f(x)\). En effet, si \(x_1\) et \(x_2\) sont deux réels, l’accroissement 
+        \(f(x_1)-f(x_2)=a(x_1-x_2)\) est proportionnel à \(x_1-x_2\). Le coefficient de
+        proportionnalité est \(a\).
+      </div>
+      
+      <div>
+        Une fonction \(f\) est affine si et seulement si il existe \(a\) tel que pour tout réels 
+        \(x_1\) et \(x_2\), \(f(x_1)-f(x_2)=a(x_1-x_2)\).
+      </div>
+      
+      <div>
+        Cette propriété donne alors un outil pour déterminer le coefficient \(a\)&#x202f;:
+        $$
+          \quad a = \frac{ f(x_2) - f(x_1) }{ x_2 - x_1 }
+        $$
+        si \(x_1 \neq x_2\).
+      </div>
+      
+      <div>
+        La dérivée d’une fonction affine est une fonction constante dont la valeur est le
+        coefficient multiplicateur <span class="incise">ou coefficient de proportionnalité</span> de
+        la fonction affine&#x202f;:<br />
+        $$
+          \quad f'(x) = a
+        $$
+      </div>
+      
+      <div>
+        L’ordonnée à l’origine \(b\) peut se calculer de la manière suivante&#x202f;:
+        $$
+          \quad b = \frac{ x_2f(x_1) - x_1f(x_2) }{ x_2 - x_1 }
+        $$
+        si \(x_1 \neq x_2\).
+      </div>
+      
+      <div>
+        Si l’on connaît l’expression de \(f\), alors on a que \( b=  f(0) \).
+      </div>
+      
+      <h3>Résolution d’équations et d’inéquations</h3>
+      
+      <div>
+        Supposons \(a\) et \(b\) réels et \(a\) non nul.
+      </div>
+      
+      <div>
+        L’unique solution de l’équation \( ax+b=0 \) est le réel&#x202f;:
+        $$
+          \quad -\frac{b}{a}
+        $$
+      </div>
+      
+      <div>
+        L’ensemble des solutions de l’inéquation \( ax+b\geq 0\) est l’intervalle
+        réel&#x202f;:
+        $$
+          \quad \left[ -\frac{b}{a}, +\infty \right[ \quad, a \gt 0
+        $$
+        ou bien
+        $$
+          \quad \left] -\infty , -\frac{b}{a} \right] \quad, a \lt 0
+        $$
+      </div>
+      
+      <h3>Représentation graphique</h3>
+      
+      <div>
+        La représentation graphique d’une fonction affine définie sur l’ensemble des réels est une
+        droite dont l’équation est&#x202f;:
+        $$
+          y = ax + b
+        $$
+      </div>
+      
+      <figure>
+        <img src="affine.png" width="50%">
+        <figcaption>Graphique de la fonction affine \(f(x) = \frac{1}{2}x + 5 \).</figcaption>
+      </figure>
+      
+      <div>
+        La droite coupe l’axe des ordonnées pour \(y=b\) (d’où le nom d’ordonnée à l’origine).
+        Lorsque \(b\) est nul, la droite passe par l’origine du repère cartésien.
+      </div>
+      
+      <div>
+        La droite a pour <q>pente</q> ou <q>coefficient directeur</q> le réel \(a\). Si \(a \gt 0\),
+        la fonction affine est croissante (la droite <q>monte</q>) et si \(a \lt 0\), elle est
+        décroissante (la droite <q>descend</q>).
+      </div>
+      
+      <h2>Fonction quadratique</h2>
+      
+      <h3>Définition</h3>
+      
+      <div>
+        Une fonction quadratique est une fonction numérique définie par&#x202f;:
+        $$
+          \quad f : x \mapsto ax^{2}+bx+c
+        $$
+        où \(a\), \(b\) et \(c\) sont des nombres réels qui ne dépendent pas de la variable \(x\),
+        avec \( a \neq 0 \).
+      </div>
+      
+      <h3>Différentes formes</h3>
+      
+      <h4>Forme développée</h4>
+      
+      <div>
+        La forme développée, réduite et ordonnée d’une fonction quadratique est&#x202f;:
+        $$
+          \quad f(x) = ax^{2}+bx+c
+        $$
+        avec \(a\) non nul.
+      </div>
+      
+      <div>
+        Dans ce cas, les nombres \(a\), \(b\) et \(c\), suivant le vocabulaire des polynômes, sont
+        respectivement appelés coefficients du second degré, du premier degré et terme constant. Les
+        termes \(ax^2\), \(bx\) et \(c\) sont les monômes respectivement de degré 2, 1 et 0. Sous
+        cette forme constituée de trois monômes, la fonction est souvent appelée trinôme du second
+        degré.
+      </div>
+      
+      <h4>Forme canonique</h4>
+      
+      <div>
+        Toute fonction quadratique possède une forme réduite ou forme canonique, où la variable
+        \(x\) n’apparaît qu’une seule fois. Chacune des deux expressions suivantes peut être nommée
+        forme canonique, ces expressions ne diffèrent que par une factorisation par
+        \(a\)&#x202f;:
+        $$
+          \quad f(x) = a \left( x + \frac{b}{2a} \right)^{2} - \frac{b^2-4ac}{4a}
+        $$
+        $$
+          \quad f(x) = a \left[ \left( x + \frac{b}{2a} \right)^{2} - \frac{b^2-4ac}{4a^2} \right]
+        $$
+      </div>
+      
+      <div>
+        Les nombres \( -\frac{b}{2a} \) et \( f\left(-\frac{b}{2a}\right)=-\frac{b^2-4ac}{4a}\)
+        correspondent respectivement à l’abscisse et l’ordonnée du sommet de la parabole
+        représentative du trinôme.<br />
+        Le nombre \(b^2-4ac\), quant à lui, est appelé discriminant et souvent noté \(\Delta\).
+      </div>
+      
+      <div>
+        Les formes canoniques sont particulièrement intéressantes car elles permettent d’écrire la
+        fonction du second degré comme une composée de fonctions affines avec la fonction carré. La
+        plupart des résultats sur la fonction (variations, symétrie, signe…) se démontrent grâce à
+        l’une ou l’autre des formes canoniques.
+      </div>
+      
+      <h4>Forme factorisée</h4>
+      
+      <div>
+        Une fonction quadratique peut s’écrire sous une forme factorisée
+        suivant la valeur du discriminant \(\Delta\).
+      </div>
+      
+      <div>
+        Si \(\Delta \gt 0\)&#x202f;:
+        $$
+          \quad f(x) = a(x-r_1)(x-r_2) \quad \backslash \quad  r_{1,2}=\frac{-b\pm\sqrt{\Delta}}{2a}
+        $$
+      </div>
+      
+      <div>
+        Si \(\Delta = 0\)&#x202f;:
+        $$
+          \quad f(x) = a(x-r_0) \quad \backslash \quad r_0 = \frac{-b}{2a}
+        $$
+      </div>
+      
+      <div>
+        Si \(\Delta \lt 0\)&#x202f;: la fonction n’est pas factorisable dans \(\mathbb{R}\).
+      </div>
+      
+      <h3>Équation du second degré</h3>
+     
+      <h4>Équation</h4>
+     
+      <div>
+        Une équation du second degré est une équation équivalente à \(f(x)=0\), où \(f\) est une
+        fonction quadratique.
+      </div>
+      
+      <div>
+        On dit qu’un nombre \(r\) est une racine de l’équation et de \(f\) si \(f(r)=0\).
+      </div>
+      
+      <div>
+        On démontre, par application du théorème de l’équation produit-nul sur la forme factorisée,
+        que&#x202f;:<br />
+        Si \(\Delta \gt 0\) alors \(f\) possède deux racines qui sont&#x202f;:
+        $$
+          \quad r_{1,2} = \frac{-b\pm\sqrt{\Delta}}{2a}
+        $$
+        Si \(\Delta = 0\) alors \(f\) possède une racine double qui est&#x202f;:
+        $$
+          \quad r_0 = \frac{-b}{2a}
+        $$
+        Si \(\Delta \lt 0\) alors \(f\) ne possède pas de racine dans l’ensemble \(\mathbb{R}\)
+        mais elle en possède deux dans l’ensemble \(\mathbb{C}\)&#x202f;:
+        $$
+          \quad \frac{-b \pm \mathrm{i}\sqrt{\left|\Delta\right|}}{2a}
+        $$
+      </div>
+      
+      <h4>Opérations sur les racines</h4>
+      
+      <div>
+        Si le polynôme du second degré possède deux racines \(r_1\) et \(r_2\) (éventuellement
+        confondues), il admet comme forme factorisée \( a(x-r_1)(x-r_2)\). Par développement de
+        cette forme et identification des termes de même degré avec la forme développée, on obtient
+        les égalités&#x202f;:
+        $$
+          \quad r_1 + r_2 = -\frac{b}{a}
+        $$
+        et
+        $$
+          \quad r_{1}r_{2} = \frac {c}{a}
+        $$
+      </div>
+      
+      <h3>Représentation graphique</h3>
+      
+      <div>
+        La représentation graphique d’une fonction quadratique est une parabole qui admet comme axe
+        de symétrie la droite d’équation \(x=\frac{-b}{2a}\).
+      </div>
+      
+      <figure>
+        <img src="quadratique.png" width="50%">
+        <figcaption>Graphique de la fonction quadratique \(f(x) = x^2 -5x + 8 \).</figcaption>
+      </figure>
+      
+      <div>
+        Les variations et la forme de la parabole présentent deux cas, suivant le signe du
+        coefficient de second degré \(a\)&#x202f;:
+        <ol>
+          <li>Si \(a \gt 0\), la parabole admet un minimum&#x202f;; la fonction est décroissante
+            sur l’intervalle \( \left] -\infty , \frac {-b}{2a} \right] \) puis croissante. Les
+            coordonnées du minimum sont \( \left( \frac{-b}{2a}, c-\frac{b^2}{4a} \right) \).<br />
+            La parabole est tournée <q>vers le haut</q>. La fonction est convexe.</li>
+          <li>Si \(a \lt 0\), la parabole admet un maximum&#x202f;; la fonction est croissante sur
+            l’intervalle \( \left] -\infty , \frac {-b}{2a} \right] \) puis décroissante. Les
+            coordonnées du maximum sont \( \left( \frac{-b}{2a}, c-\frac{b^2}{4a} \right) \).<br />
+            La parabole est tournée <q>vers le bas</q>. La fonction est concave.</li>
+        </ol>
+      </div>
+      
+      <div>
+        La valeur absolue du nombre \(a\) donne également la vitesse de variation de la fonction 
+        quadratique. Ainsi, plus \(a\) est proche de zéro, plus la parabole va paraître
+        <q>aplatie</q>, pour un repère donné.
+      </div>
+      
+      <div>
+        Pour l’intersection de la parabole avec l’axe des abscisses, un autre nombre joue un rôle
+        central, le discriminant \(\Delta\)&#x202f;:
+        <ol>
+          <li>Si \(\Delta \lt 0\), la parabole n’a aucun point d’intersection avec l’axe des
+            abscisses.</li>
+          <li>Si \(\Delta = 0\), la parabole est tangente en un point avec l’axe des abscisses.</li>
+          <li>Si \(\Delta \gt 0\), la parabole  possède deux points d’intersection avec l’axe des
+            abscisses.</li>
+        </ol>
+      </div>
+      
+      <h3>Analyse</h3>
+      
+      <div>
+        Toute fonction quadratique est continue, ce qui signifie qu’elle n’admet pas de
+        <q>cassure</q>&#x202f;: à une variation infinitésimale de la variable \(x\) correspond une
+        variation infinitésimale de la fonction, pour tout nombre réel \(x\).
+      </div>
+      
+      <div>
+        De plus, elle est indéfiniment dérivable&#x202f;: toute fonction \(f\) de la forme 
+        \(f(x)=ax^2+bx+c\) admet&#x202f;:
+        <ul>
+          <li>une dérivée \(f'(x)=2ax+b\)</li>
+          <li>une dérivée seconde \(f''(x)=2a\)</li>
+          <li>des dérivées successives (dérivée troisième, quatrième, etc.) toutes nulles</li>
+        </ul>
+      </div>
+      
+      <div>
+        Du point de vue de leurs variations, les fonctions quadratiques peuvent être classées en
+        deux groupes, suivant le signe du coefficient de second degré \(a\)&#x202f;:
+        <ol>
+          <li>Si \(a \gt 0\), la fonction est strictement décroissante puis strictement croissante
+            et atteint son minimum en \(\frac {-b}{2a}\).</li>
+          <li>Si \(a \lt 0\), la fonction est strictement croissante puis strictement décroissante
+            et atteint son maximum en \(\frac {-b}{2a}\).</li>
+        </ol>
+        Dans les deux cas, les coordonnées de l’extremum sont donc
+        \( \left( \frac{-b}{2a}, c-\frac{b^2}{4a} \right) \).
+      </div>
+      
+      <div>
+        Ce résultat peut être démontré par l’étude du signe de la dérivée de \(f\), en utilisant le
+        fait qu’une fonction dérivable est strictement croissante sur tout intervalle où sa dérivée
+        est strictement positive et strictement décroissante sur tout intervalle où sa dérivée est
+        strictement négative. La convexité de \(a\) (ou sa concavité lorsque \(a \lt 0\)) se
+        démontre également par les dérivées. En effet, toute fonction dont la dérivée seconde est
+        positive est convexe, et toute fonction dont la dérivée seconde est négative est concave.
+      </div>
+      
+      <div>
+        Les primitives de la fonction \(f(x)=ax^2+bx+c\) sont les fonctions du troisième degré de la
+        forme \( G_{k}(x)= \frac{1}{3}ax^3+\frac{1}{2}bx^2+cx+k \), où \(k\) est une constante.
+      </div>
+      
+      <h2>Fonction cubique</h2>
+      
+      <h3>Définition</h3>
+      
+      <div>
+        Une fonction cubique est une fonction numérique définie par&#x202f;:
+        $$
+          \quad f : x \mapsto ax^{3}+bx^{2}+cx+d
+        $$
+        où \(a\), \(b\), \(c\) et \(d\) sont des nombres réels qui ne dépendent pas de la variable
+        \(x\), avec \( a \neq 0 \).
+      </div>
+      
+      <h3>Points critiques</h3>
+      
+      <div>
+        Les points critiques de \(f\) sont les abscisses des points du graphe où la pente de la
+        tangente est nulle, c’est-à-dire les \(x\) en lesquels la dérivée de \(f\)
+        s’annule&#x202f;:
+        $$
+          \quad 3ax^2+2bx+c=0
+        $$
+        Les solutions de cette équation sont données, en utilisant la formule quadratique avec
+        discriminant réduit&#x202f;:
+        $$
+          \quad x_{critique}=\frac{-b \pm \sqrt{\Delta_0} }{3a}
+        $$
+        avec
+        $$
+          \quad \Delta_0=b^2-3ac
+        $$
+      </div>
+      
+      <div>
+        Le signe de \(\Delta_0\) détermine le nombre de points critiques et d’extrema locaux de
+        \(f\)&#x202f;:
+        <ul>
+          <li>Si \(\Delta_0 \gt 0\), alors \(f\) a un maximum local et un minimum local</li>
+          <li>Si \(\Delta_0 = 0\), alors le point d’inflexion (voir ci-dessous) est le seul point
+            critique</li>
+          <li>Si \(\Delta_0 \lt 0\), alors \(f\) n’a pas de point critique</li>
+        </ul>
+        Dans les cas où \(\Delta_0 \leq 0\), \(f\) est strictement monotone donc n’a pas d’extremum
+        local.
+      </div>
+      
+      <figure>
+        <img src="cubique.png" width="50%">
+        <figcaption>Graphique de la fonction cubique \(f(x) = x^3 - x^2 -144x + 432 \)
+        et sa dérivée.</figcaption>
+      </figure>
+     
+      <h3>Point d’inflexion et symétrie</h3>
+      
+      <div>
+        La courbe d’une fonction cubique a toujours un point d’inflexion, c’est-à-dire un point où
+        la courbe change de concavité.
+      </div>
+      
+      <div>
+        Puisque la dérivée seconde de \(f\) s’exprime par \(f''(x)=6ax+ 2b\), l’abscisse de ce point
+        est&#x202f;:
+        $$
+          \quad x_0 =-\frac{b}{3a}
+        $$
+        L’ordonnée est&#x202f;:
+        $$
+          \quad y_0 = f(x_0) = \frac{2b^3}{27a^2} - \frac{bc}{3a} + d
+        $$
+      </div>
+      
+      <div>
+        La courbe est symétrique par rapport à ce point.
+      </div>
+
+    </section>
+  </body>
+</html>

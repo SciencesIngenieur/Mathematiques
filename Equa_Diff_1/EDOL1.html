@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Équations différentielles ordinaires linéaires du premier ordre</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Équations différentielles ordinaires linéaires du premier ordre</h1>
+
+      <h2>Définitions et vocabulaire</h2>
+
+      <div>
+        On appelle équation différentielle ordinaire linéaire du premier ordre toute équation de la
+        forme&#x202f;:
+        $$
+          \quad (E) \quad a(x){y}'(x) + b(x)y(x) = f(x)
+        $$
+        où \(y\) est une fonction réelle inconnue, et \(a\), \(b\) et \(f\) sont des fonctions
+        réelles connues qui dépendent d’une seule variable.
+      </div>
+      
+      <div>
+        L’équation est dîte&#x202f;:
+        <ul>
+          <li><q>différentielle</q> car elle fait intervenir les dérivées de la fonction \(y\)</li>
+          <li><q>ordinaire</q> car la fonction \(y\) ne dépend que d’une seule variable réelle</li>
+          <li><q>linéaire</q> car les fonctions \(a\) et \(b\) ne dépendent pas de \(y\)</li>
+          <li><q>du premier ordre</q> car seule la dérivée première de la fonction \(y\)
+            intervient</li>
+        </ul>
+      </div>
+
+      <div>
+        Les fonctions \(a\) et \(b\) sont appelées coefficients de l’équation différentielle
+        ordinaire et la fonction \(f\) second membre de l’équation différentielle ordinaire.
+      </div>
+
+      <div>
+        Définition&#x202f;:<br />
+        Soit \(I\) un intervalle de \(\mathbb{R}\). On suppose que&#x202f;:
+        <ul>
+          <li>les fonctions \(a\), \(b\) et \(f\) sont continues sur \(I\)</li>
+          <li>pour tout \(x \in I\), \(a(x) \neq 0\)</li>
+        </ul>
+        Sous ces conditons, on appelle solution de \((E)\) sur \(I\) toute fonction  \(y\) de classe
+        \(C^1\) sur \(I\) et vérifiant \((E)\) en tout point \(x\) de \(I\).
+      </div>
+
+      <div>
+        On ne cherchera jamais à résoudre l’équation \((E)\) sur un intervalle \(I\) où les
+        hypothèses ci-dessus ne sont pas vérifiées. Par commodité, nous utiliserons la notation
+        \(\mathcal{H}\) pour désigner ces hypothèses.
+      </div>
+
+      <div>
+        Vocabulaire&#x202f;:<br />
+        L’équation \((E)\) est dite homogène si la fonction \(f\) est identiquement nulle.<br />
+        L’équation \((E)\) est dite à coefficients constants si les fonctions \(a\) et \(b\) sont
+        constantes.
+      </div>
+
+      <h2>Résolution</h2>
+
+      <h3>Existence de solutions</h3>
+
+      <div>
+        Proposition&#x202f;:<br />
+        Si les hypothèses \(\mathcal{H}\) sont vérifiées, alors l’équation \((E)\) possède une
+        infinité de solutions.
+      </div>
+
+      <div>
+        On appelle condition initiale toute condition du type \(y(t_0)=\alpha\) où  \(t_0 \in I\)
+        et \(\alpha \in \mathbb{R}\). Cette condition vient compléter \((E)\) pour former ce que
+        l’on appelle un problème de Cauchy&#x202f;:
+        $$
+          \quad (P) \quad
+          \left\{
+            \begin{aligned} 
+              &a(x){y}'(x) + b(x)y(x) = f(x) \\
+              &y(t_0)=\alpha
+            \end{aligned}
+          \right.
+        $$
+      </div>
+
+      <div>
+        <u>Théorème&#x202f;:</u><br />
+        Si les hypothèses \(\mathcal{H}\) sont vérifiées, alors le problème de Cauchy \((P)\)
+        possède une unique solution sur \(I\).
+      </div>
+
+      <div>
+        Sans condition initiale, \((E)\) possède toujours une infinité de solutions. Avec condition
+        initiale, il n’existe qu’une seule solution.
+      </div>
+
+      <div>
+        <u>Théorème&#x202f;:</u><br />
+        Soit \(I\) un intervalle de \(\mathbb{R}\) et \((E)\) une équation différentielle ordinaire
+        linéaire du premier ordre telles que les hypothèses \(\mathcal{H}\)  sont vérifiées. Toutes
+        les solutions de \((E)\) s’écrivent alors&#x202f;:
+        $$
+          \quad y(x) = y_h(x) + y_0(x)
+        $$
+        où&#x202f;:
+        <ul>
+          <li>\(y_h\) est solution de l’équation homogène associée à \((E)\) et notée \((E_h)\)</li>
+          <li>\(y_0\) est une solution de \((E)\), appelée solution particulière</li>
+        </ul>
+      </div>
+
+      <div>
+        Pour résoudre une équation différentielle ordinaire linéaire du premier ordre, on procédera
+        donc en deux étapes&#x202f;:
+        <ul>
+          <li>calcul des solutions de l’équation homogène \((E_h)\)</li>
+          <li>recherche d’une solution particulière de l’équation complète \((E)\)</li>
+        </ul>
+      </div>
+
+      <h3>Résolution des équations homogènes</h3>
+
+      <div>
+        On s’intéresse dans ce paragraphe à la résolution des équations différentielles ordinaires
+        linéaires homogènes de la forme&#x202f;:
+        $$
+          \quad (E_h) \quad a(x){y_h}'(x) + b(x)y_h(x) = 0
+        $$
+      </div>
+
+      <div>
+        <u>Proposition</u><br />
+        Soit \((I)\) un intervalle où les hypothèses \(\mathcal{H}\) sont vérifiées. Alors toutes
+        les solutions de \((E_h)\) s’écrivent sous la forme&#x202f;:
+        $$
+          \quad  y_h(x) = Ce^{u(x)}, \forall x \in I
+        $$
+        où&#x202f;:<br />
+        <ul>
+          <li>\(u\) est une primitive de la fonction \(x \mapsto - \frac{b(x)}{a(x)}\),
+          c’est à dire&#x202f;: \(u'(x)= - \frac{b(x)}{a(x)}, \forall x \in I\)</li>
+          <li>\(C\) est une constante réelle arbitraire</li>
+        </ul>
+      </div>
+
+      <h3>Recherche de solutions particulières aux équations non-homogènes</h3>
+
+      <div>
+        On commence toujours par regarder s’il n’y a pas de solution évidente, sinon on peut
+        appliquer l’une des méthodes suivantes.
+      </div>
+
+      <h4>Cas d’une équation à coefficients constants</h4>
+
+      <div>
+        Si le second membre est constant, par exemple \(f(x) = \alpha\) où
+        \( \alpha \in \mathbb{R} \), alors une solution particulière est
+        \( y_0(x) = \frac{\alpha}{b} \).
+      </div>
+
+      <div>
+        Si le second membre est de la forme \(f(x) = \alpha\cos(x) + \beta\sin(x) \) alors on peut
+        chercher une solution sous la forme&#x202f;: \( y_0(x) = c_1\cos(x) + c_2\sin(x) \).
+      </div>
+      
+      <div>
+        Si le second membre est de la forme \(f(x) = e^{\lambda x}P_n(x) \) où \(P_n\) est un
+        polynôme de degré \(n\)&#x202f;:
+        <ul>
+          <li>si \(\lambda \neq -\frac{b}{a}\), alors on cherche une solution sous la forme
+            \(y_0(x) = e^{\lambda x}Q_n(x)\) où \(Q_n\) est un polynôme de degré \(n\)</li>
+          <li>si \(\lambda = -\frac{b}{a}\), alors on cherche une solution sous la forme
+            \(y_0(x) = e^{\lambda x}xQ_n(x)\) où \(Q_n\) est un polynôme de degré \(n\)</li>
+        </ul>
+      </div>
+
+      <h4>Cas général&#x202f;: méthode de variation de la constante</h4>
+
+      <div>
+        Le principe est le suivant&#x202f;:<br />
+        On a trouvé une solution de l’équation homogène de la forme&#x202f;:
+        \(y_h(x) = Ce^{u(x)}\).<br />
+        On va chercher une solution particulière sous la forme&#x202f;:
+        \(y_0(x) = C(x)e^{u(x)}\).
+        La constante C est <q>devenue</q> une fonction et vérifie alors&#x202f;:
+        $$
+           \quad  C'(x) = \frac{f(x)}{a(x)}e^{-u(x)}
+        $$
+      </div>
+
+    </section>
+  </body>
+</html>

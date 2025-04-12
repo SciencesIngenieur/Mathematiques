@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Intégration</title>
+    <link rel="stylesheet" type="text/css" media="screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Intégration</h1>
+
+      <h2>Définition sur un intervalle fermé</h2>
+      
+      <h3>Calcul d’aire</h3>
+      
+      <div>
+        Dans un plan muni d’un repère cartésien, on choisit comme unité d’aire l’aire du
+        quadrilatère \(OIKJ\) où \(O\) est l’origine du repère et \(I\), \(J\) et \(K\) les points
+        de coordonnées respectives \((1 ; 0)\), \((0 ; 1)\) et \((1 ; 1)\).
+      </div>
+      
+      <div>
+        Si \(f\) est une fonction réelle positive continue prenant ses valeurs dans un segment
+        \(I = [a, b]\), alors l’intégrale de \(f\) sur \(I\), notée
+        $$
+          \quad \int_{a}^{b} f(x)\mathrm{d}x
+        $$
+        est l’aire d’une surface délimitée par la représentation graphique de \(f\) et par les trois
+        droites d’équation \(x = a\), \(x = b\), \(y = 0\), surface notée \(S_f\).
+      </div>
+      
+      <figure>
+        <img src="Aire_sous_la_courbe.png">
+        <figcaption>L’intégrale d’une fonction positive.</figcaption>
+      </figure>
+      
+      <div>
+        \(S_f\) peut se définir comme&#x202f;:
+        $$
+          \quad S_f =\{ (x,y) \in \mathbb{R}^{+2} \mid x \in I {\text{ et }} 0 \leq y \leq f(x) \}
+        $$
+      </div>
+      
+      <div>
+        On donne un signe positif à l’aire des surfaces situées au-dessus de l’axe des abscisses.
+        Pour pouvoir traiter aussi les fonctions négatives, on donne un signe négatif aux portions
+        situées sous cet axe.
+      </div>
+      
+      <div>
+        Ainsi, pour définir l’intégrale d’une fonction continue dans le cas général (positive ou
+        négative), il suffit de définir \(f^+\) et \(f^–\), communément appelées parties positive et
+        négative de \(f\) respectivement, comme suit&#x202f;:
+        $$
+          \quad f^{+}(x) =
+            \begin{cases}
+            f(x) &{ \text{si }} f(x)\gt0 \\ 
+            0,   &{ \text{sinon }}
+            \end{cases}
+        $$
+        $$
+          \quad f^{-}(x) =
+            \begin{cases}
+            -f(x) &{ \text{si }} f(x)\lt0 \\
+            0,    &{ \text{sinon }}
+            \end{cases}
+        $$
+        puis de définir l’intégrale de \(f\) à partir de \(f^+\) et \(f^–\), fonctions continues et
+        positives&#x202f;:
+        $$
+          \quad \int_{x \in I}f(x)\mathrm{d}x = \int_{x \in I}f^+(x)\mathrm{d}x
+            - \int_{x \in I}f^-(x)\mathrm{d}x
+        $$
+      </div>
+      
+      <h3>Lien avec les primitives</h3>
+      
+      <div>
+        La principale méthode pour calculer une intégrale passe par la notion de primitive d’une
+        fonction.<br />
+        La <q>primitivation</q> est l’opération qui, à partir d’une fonction \(f\), donne une
+        fonction \(F\) dérivable et dont la dérivée est égale à \(f\)&#x202f;: \(F'(x) = f(x)\).
+      </div>
+      
+      <div>
+        On montre que toute fonction continue sur un segment \([a, b]\) admet des primitives, et que
+        l’intégrale de \(a\) à \(b\) est égale à \(F(b) – F(a)\), indépendamment de la primitive
+        choisie.
+        $$
+          \quad \boxed{ \int_{a}^{b}f(x)\mathrm{d}x = F(b)-F(a) = \left[F(x)\right]_{a}^{b} }
+        $$
+      </div>
+      
+      <div>
+        De plus, l’ensemble des primitives d’une fonction \(f\) continue sur un intervalle \(I\) est
+        donné par l’ensemble de ses intégrales indéfinies
+        $$
+          \quad \boxed{ F(x) = \int_{a}^{x}f(t)\mathrm{d}t + K }
+        $$
+        où \(a\) est un point de \(I\) et \(K\) un réel quelconque.
+      </div>
+      
+      <h2>Valeur moyenne d’une fonction</h2>
+      
+      <div>
+        Pour toute fonction continue sur un segment \([a,b]\) tel que \(a \lt b\), la valeur moyenne
+        de \(f\) sur \([a, b]\) est le réel \(m\) défini par&#x202f;:
+        $$
+          \quad m = \frac{1}{b-a} \times \int_{a}^{b}f(x)\mathrm{d}x
+        $$
+      </div>
+      
+      <h2>Propriétés des intégrales</h2>
+      
+      <h3>Relation de Chasles</h3>
+      
+      <div>
+        Soient \(f\) une fonction continue sur \(I\) et \(a\), \(b\) et \(c\) trois réels de \(I\).
+        $$
+          \quad \int_{a}^{a}f(x)\mathrm{d}x=0
+        $$
+        $$
+          \quad \int_{b}^{a}f(x)\mathrm{d}x = \int_{a}^{b}f(x)\mathrm{d}x
+        $$
+        $$
+          \quad \int_{a}^{b}f(x)\mathrm{d}x + \int_{b}^{c}f(x)\mathrm{d}x 
+            =\int_{a}^{c}f(x)\mathrm{d}x
+        $$
+      </div>
+      
+      <h3>Linéarité</h3>
+      
+      <div>
+        Soient \(f\) et \(g\) deux fonctions continues sur \(I\) et \(a\), \(b\) deux réels de
+        \(I\).
+        $$
+          \quad \forall \lambda \in \mathbb{R}, \int_{a}^{b}\lambda f(x) \mathrm{d}x
+            = \lambda \int_{a}^{b}f(x)\mathrm{d}x
+        $$
+        $$
+          \quad  \int_{a}^{b}(f(x)+g(x))\mathrm{d}x =
+            \int_{a}^{b}f(x)\mathrm{d}x + \int_{a}^{b}g(x)\mathrm{d}x
+        $$
+      </div>
+      
+      <h3>Inégalités</h3>
+      
+      <div>
+        Soient \(f\) et \(g\) deux fonctions continues sur \(I\) et \(a\), \(b\) deux réels de
+        \(I\).
+      </div>
+      
+      <div>
+        Si \(f(x) \leq g(x)\) sur \([a, b]\), alors&#x202f;:
+        $$
+          \quad \int_{a}^{b}f(x)\mathrm{d}x \leq \int_{a}^{b}g(x)\mathrm{d}x
+        $$
+      </div>
+      
+      <div>
+        Si \(f\) est continue sur \([a, b]\), avec \(a \leq b\) et si pour tout \(x\) de cet
+        intervalle, on a&#x202f;: \(m \leq f(x) \leq M\), alors&#x202f;:
+        $$
+          \quad m(b-a) \leq \int_{a}^{b}f(x)\mathrm{d}x \leq M(b-a)
+        $$
+      </div>
+      
+      <h3>Intégration par parties</h3>
+      
+      <div>
+        Soient \(u\) et \(v\) deux fonctions de classe \(C^1\) sur \([a, b]\)&#x202f;:
+        $$
+          \quad \boxed{ \int_{a}^{b}u(x)v'(x)\mathrm{d}x = [u(x)v(x)]_{a}^{b} 
+            - \int_{a}^{b}u'(x)v(x)\mathrm{d}x }
+        $$
+      </div>
+      
+      <div>
+        Par exemple, calculons&#x202f;:
+        $$
+          \quad \int_{1}^{x} \ln(t)\mathrm{d}t
+        $$
+        Si on pose \(u(t) = \ln(t)\) et \(v(t) = t\), on a&#x202f;:
+        $$
+          \quad \int_{1}^{x} \ln(t)\mathrm{d}t 
+            = [\ln(t)t]_{1}^{x} - \int_{1}^{x}\frac{1}{t} \times t \, \mathrm{d}t
+            = \ln(x)x - x +1 = x\left(\ln(x)-1\right) + 1
+        $$
+      </div>
+      
+      <h3>Intégration par changement de variable</h3>
+      
+      <div>
+        Soit \(f\) une fonction numérique continue, et \(\varphi\) une fonction de classe \(C^1\)
+        sur \([a, b]\) dont l’image est contenue dans le domaine de définition de \(f\).
+        Alors&#x202f;:
+        $$
+          \quad \boxed{ \int_{a}^{b}f(\varphi(t))\varphi'(t)\mathrm{d}t
+            = \int_{\varphi(a)}^{\varphi(b)}f(x)\mathrm{d}x }
+        $$
+      </div>
+      
+      <div>
+        Par exemple, calculons&#x202f;:
+        $$
+          \quad \int_{-\sqrt{\pi/2}}^{\sqrt{2\pi}} 2x\cos(x^2)\mathrm{d}x
+        $$
+        On peut remarquer que \(2x\) est la dérivée de \(x^2\), et que la fonction
+        \(x \mapsto \cos(x^2)\) est la composée de la fonction \(x \mapsto x^2\) suivie de la
+        fonction cosinus. 
+        Donc si on pose \(\varphi(x) = x^2\) et \(f(x)=\cos(x)\), on a&#x202f;:
+        $$
+          \quad \int_{-\sqrt{\pi/2}}^{\sqrt{2\pi}} 2x\cos(x^2)\mathrm{d}x
+            = \int_{\left(-\sqrt{\pi/2}\right)^2}^{\left(\sqrt{2\pi}\right)^2} \cos(x) \mathrm{d}x
+            = \left[ \sin(x) \right]_{\pi/2}^{2\pi} = 0-1=-1
+        $$
+      </div>
+      
+      <h2>Primitives usuelles</h2>
+      
+      <table>
+        <caption>Primitives usuelles</caption>
+        <tr>
+          <th>Fonction \(f(x)\)</th>
+          <th>Primitive \(F(x)\)</th>
+        </tr>
+        <tr>
+          <td>\(a\)</td>
+          <td>\(ax\)</td>
+        </tr>
+        <tr>
+          <td>\(1/x\)</td>
+          <td>\(\ln\left|x\right|\)</td>
+        </tr>
+        <tr>
+          <td>\(x^n\)</td>
+          <td>\(\frac{1}{n+1}x^{n+1}\)</td>
+        </tr>
+        <tr>
+          <td>\(\frac{1}{x^n}\)</td>
+          <td>\(-\frac{1}{n-1}\frac{1}{x^{n-1}}\)</td>
+        </tr>
+        <tr>
+          <td>\(a^{x}\)</td>
+          <td>\(\frac{a^{x}}{\ln(a)}\)</td>
+        </tr>
+        <tr>
+          <td>\(\ln(x)\)</td>
+          <td>\(x\left(\ln(x)-1\right)\)</td>
+        </tr>
+        <tr>
+          <td>\(\cos(x)\)</td>
+          <td>\(\sin(x)\)</td>
+        </tr>
+        <tr>
+          <td>\(\sin(x)\)</td>
+          <td>\(-\cos(x)\)</td>
+        </tr>
+        <tr>
+          <td>\(\frac{1}{\cos^2(x)}\)</td>
+          <td>\(\tan(x)\)</td>
+        </tr>
+        <tr>
+          <td>\(\tan(x)\)</td>
+          <td>\(-\ln\left|\cos(x)\right|\)</td>
+        </tr>
+        <tr>
+          <td>\(\frac{1}{\sqrt{1-x^2}}\)</td>
+          <td>\(\arcsin(x)\)</td>
+        </tr>
+        <tr>
+          <td>\(\frac{1}{1+x^2}\)</td>
+          <td>\(\arctan(x)\)</td>
+        </tr>
+        <tr>
+          <td>\((u^a) \times u'\)</td>
+          <td>\(\frac{u^{a+1}}{a+1}\)</td>
+        </tr>
+        <tr>
+          <td>\(\frac{u'}{u}\)</td>
+          <td>\(\ln\left|u\right|\)</td>
+        </tr>
+        <tr>
+          <td>\(e^u \times u'\)</td>
+          <td>\(e^u\)</td>
+        </tr>
+        <tr>
+          <td>\((\sin u)\times u'\)</td>
+          <td>\(-\cos u\)</td>
+        </tr>
+        <tr>
+          <td>\((\cos u)\times u'\)</td>
+          <td>\(\sin u\)</td>
+        </tr>
+      </table>
+      
+    </section>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Développement limité</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+  
+    <section>
+    
+      <h1>Développement limité</h1>
+      
+      <h2>Introduction</h2>
+      
+      <div>
+        Un développement limité d’une fonction en un point est une approximation polynomiale de
+        cette fonction au voisinage de ce point, c’est-à-dire l’écriture de cette fonction sous la
+        forme de la somme&#x202f;:
+        <ul>
+          <li>d’une fonction polynomiale</li>
+          <li>d’un reste négligeable au voisinage du point considéré</li>
+        </ul>
+      </div>
+      
+      <div>
+        En physique, il est fréquent de confondre la fonction avec son développement limité, à
+        condition que l’erreur (c’est-à-dire le reste) ainsi faite soit inférieure à l’erreur
+        autorisée. Si l’on se contente d’un développement d’ordre un, on parle d’approximation
+        linéaire ou d’approximation affine.
+      </div>
+      
+      <div>
+        En mathématiques, les développements limités permettent de trouver plus simplement des
+        limites de fonctions, de calculer des dérivées, de prouver qu’une fonction est intégrable ou
+        non, ou encore d’étudier des positions de courbes par rapport à des tangentes. Ils
+        permettent également l’obtention d’équivalents.
+      </div>
+      
+      <h2>Définitions</h2>
+      
+      <div>
+        Soit \(f\) une fonction à valeurs réelles définie sur un intervalle \(I\), et \(x_0 \in I\).
+        On dit que \(f\) admet un développement limité d’ordre \(n\) en \(x_0\), s’il existe \(n+1\)
+        réels \(a_0\), \(a_1\), …, \(an\) tels que la fonction \( R:I \to \mathbb{R}\) définie
+        par&#x202f;:
+        $$
+          \quad f(x) = a_0 + a_1(x-x_0) + \cdots + a_n(x-x_0)^n + R(x)
+            =\sum_{i=0}^n a_i(x-x_0)^i + R(x)
+        $$
+        vérifie&#x202f;: \(R(x)\) tend vers \(0\) lorsque \(x\) tend vers \(x_0\), et ce <q>plus
+        rapidement</q> que le dernier terme de la somme, c’est-à-dire que&#x202f;:
+        $$
+          \quad \lim_{x \rightarrow x_0} \frac{R(x)}{(x-x_0)^n} = 0
+        $$
+      </div>
+      
+      <div>
+        Les fonctions \(R\) vérifiant ceci sont notées \(o((x – x_0)^n)\). On écrit
+        donc&#x202f;:
+        $$
+          \quad \boxed{ f(x) = \sum_{i=0}^n a_i(x-x_0)^i + o((x – x_0)^n) }
+        $$
+      </div>
+      
+      <h3>Conséquences immédiates</h3>
+      
+      <div>
+        Si \(f\) admet un développement limité d’ordre \(0\) en \(x_0\), alors \(a_0 = f(x_0)\).
+      </div>
+      
+      <div>
+         Si \(f\) admet un développement limité d’ordre \(n\) en \(x_0\), alors elle admet un
+         développement limité d’ordre \(k\) en \(x_0\) pour tout entier \(k \lt n\).
+      </div>
+      
+      <div>
+        Une condition nécessaire et suffisante pour que \(f\) admette un développement limité
+        d’ordre \(n\) en \(x_0\) est l’existence d’un polynôme \(P\) tel que \(f(x) = P(x)
+        + o((x – x_0)^n)\). S’il existe un tel polynôme \(P\), alors il en existe une infinité
+        d’autres, mais un seul d’entre eux est de degré inférieur ou égal à \(n\)&#x202f;: le reste
+        de la division euclidienne de \(P(X)\) par \((X – x_0)^{n+1}\). On l’appelle la partie
+        régulière, ou partie principale, du développement limité d’ordre \(n\) de \(f\)en \(x_0\).
+        On identifie parfois, par abus de langage, le développement limité d’ordre \(n\) avec sa
+        partie régulière.
+      </div>
+      
+      <h2>Opérations sur les développements limités</h2>
+      
+      <div>
+        <u>Somme</u><br />
+        Si \(f\) et \(g\) admettent deux développements limités d’ordre \(n\) en \(x_0\), alors
+        \(f + g\) admet un développement limité d’ordre \(n\) en \(x_0\), dont la partie régulière
+        s’obtient en sommant les deux parties régulières des développement limité d’ordre \(n\) de
+        \(f\) et \(g\).
+      </div>
+      
+      <div>
+        <u>Multiplication par un scalaire</u><br />
+        Si \(f\) admet un développement limité d’ordre \(n\) en \(x_0\), alors \(\lambda f\) admet
+        un développement limité d’ordre \(n\) en \(x_0\), dont la partie régulière s’obtient en
+        multipliant la partie régulière du développement limité d’ordre \(n\) de \(f\) par
+        \(\lambda\).
+      </div>
+      
+      <div>
+        <u>Produit</u><br />
+        Si \(f\) et \(g\) admettent deux développements limités d’ordre \(n\) en \(x_0\), de parties
+        régulières respectives \(P\) et \(Q\) alors \(fg\) admet un développement limité d’ordre
+        \(n\) en \(x_0\) qui est le produit \(PQ\) amputé de ses termes de degrés strictement plus
+        grands que \(n\).
+      </div>
+      
+      <div>
+        <u>Inverse</u><br />
+        Si \(u(x_0) = 0\) et si \(u\) admet un développement limité d’ordre \(n\) en \(x_0\), alors
+        \(\frac{1}{1-u}\) admet un développement limité d’ordre \(n\). La partie régulière de ce
+        développement limité est celle du développement limité d’ordre \(n\) en \(x_0\) de
+        \( \sum_{k=0}^n u^k\).
+      </div>
+      
+      <div>
+        <u>Quotient</u><br />
+        On peut combiner le produit et l’inverse, ou faire une division suivant les puissances
+        croissantes de la partie régulière du numérateur par celle du dénominateur.
+      </div>
+      
+      <div>
+        <u>Composition</u><br />
+        Si \(u\) admet un développement limité d’ordre \(n\) en \(x_0\) de partie régulière \(P\) et
+        si \(v\) admet un développement limité d’ordre \(n\) en \(x_0\) de partie régulière \(Q\),
+        alors \(v \circ u\) admet un développement limité d’ordre \(n\) en \(x_0\) qui est la
+        composée \(Q \circ P\) amputée de ses termes de degrés strictement plus grands que \(n\).
+      </div>
+      
+      <h2>Développement limité et fonctions dérivables</h2>
+      
+      <div>
+        Le théorème de Taylor-Young assure qu’une fonction \(f\) dérivable \(n\) fois au point
+        \(x_0\) (avec \(n \geq 1\)) admet un développement limité d’ordre \(n\) en ce point&#x202f;:
+        $$
+          \quad \boxed{ f(x) = \sum_{i=0}^n \frac{f^{(i)}(x_0)}{i!}(x - x_0)^i + o((x-x_0)^n) }
+        $$
+      </div>
+      
+      <div>
+        L’existence d’un développement limité d’ordre \(0\) en \(x_0\) équivaut à la continuité en
+        \(x_0\), et l’existence d’un développement limité d’ordre \(1\) en \(x_0\) équivaut à la
+        dérivabilité en \(x_0\).<br />
+        En revanche, pour \(n \geq 2\), l’existence d’un développement limité d’ordre \(n\) en
+        \(x_0\) n’implique pas que la fonction soit \(n\) fois dérivable en \(x_0\).
+      </div>
+      
+      <h2>Utilisations</h2>
+      
+      <div>
+        Le développement d’ordre \(0\) en \(x_0\) revient à écrire que \(f\) est continue en
+        \(x_0\)&#x202f;:
+        $$
+          \quad f(x) = f(x_0) + o((x-x_0)^0) = f(x_0) + o(1)
+        $$
+      </div>
+      
+      <div>
+        Le développement d’ordre \(1\) en \(x_0\) revient à approcher une courbe par sa tangente en
+        \(x_0\)&#x202f;; on parle aussi d’approximation affine&#x202f;:
+        $$
+          \quad f(x) = f(x_0) + f'(x_0)(x - x_0) + o(x-x_0)
+        $$
+        Son existence équivaut à la dérivabilité de la fonction en \(x_0\).
+      </div>
+      
+      <div>
+        Le développement limité d’ordre 2 en \(x_0\) revient à approcher une courbe par une
+        parabole, ou loi quadratique, en \(x_0\). Il permet de préciser la position de la courbe par
+        rapport à sa tangente au voisinage de \(x_0\), pourvu que le coefficient du terme de degré 2
+        soit non nul&#x202f;: le signe de ce coefficient donne en effet cette position.
+      </div>
+      
+      <div>
+        Le changement de variable \(h = \frac{1}{x}\) permet, à l’aide d’un développement limité
+        d’ordre 0 en 0, de chercher une limite à l’infini, et, à partir d’un développement limité
+        d’ordre 1 en 0, de déterminer l’équation d’une asymptote (comme pour la tangente, le
+        développement limité d’ordre 2 permet de préciser la position de la courbe par rapport à
+        l’asymptote).
+      </div>
+      
+      <h2>Formulaire</h2>
+      
+      <div>
+        $$
+        \quad (1 + x)^a  = 1 + ax + \frac{a(a-1)}{2!}x^2 + \cdots + 
+          \frac{a(a-1)(a-2)\cdots(a-(n-1))}{n!}x^n + o(x^n)
+        $$
+      </div>
+
+      <div>
+        $$
+          \quad \frac{1}{1-x} = 1 + x + x^2 + x^3 +\cdots + x^n + o(x^n)
+        $$
+      </div>
+      
+      <div>
+        $$
+          \quad \frac{1}{1+x} = 1 - x + x^2 - x^3 + \cdots + (-1)^nx^n + o(x^n)
+        $$
+      </div>
+      
+      <div>
+        $$
+          \quad \ln(1-x) = -x -\frac{x^2}{2} -\frac{x^3}{3} -\cdots -\frac{x^n}{n} + o(x^n)
+        $$
+      </div>
+      
+      <div>
+        $$
+          \quad \ln(1+x) = x -\frac{x^2}{2} + \frac{x^3}{3} - \cdots + (-1)^{n-1}\frac{x^n}{n}
+            +o(x^n)
+        $$
+      </div>
+      
+      <div>
+        $$
+          \quad \mathrm{e}^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots + \frac{x^n}{n!}
+            +o(x^n)
+        $$
+      </div>
+      
+      <div>
+        $$
+          \quad \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots + (-1)^n\frac{x^{2n}}{(2n)!}
+            +o(x^{2n+1})
+        $$
+      </div>
+      
+      <div>
+        $$
+          \quad \sin x = x- \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots +(-1)^n\frac{x^{2n+1}}{(2n+1)!}
+            +o(x^{2n+2})
+        $$
+      </div>
+      
+    </section>
+  </body>
+</html>
+
