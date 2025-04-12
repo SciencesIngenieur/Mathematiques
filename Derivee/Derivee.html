@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dérivée</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Dérivée</h1>
+
+      <h2>Définition</h2>
+
+      <div>
+        Soit \(f\) une fonction réelle à valeurs réelles définie sur une réunion quelconque
+        d’intervalles non triviaux (c’est-à-dire non vides et non réduits à un point), et \(x_0\)
+        appartenant à l’intérieur de l’ensemble de définition  \(\mathcal{D}_{f}\).
+      </div>
+
+      <div>
+       Pour tout \(h \in \mathbb{R}^{*}\) tel que \([x_{0},x_{0}+h] \subset {\mathcal{D}}_{f}\),
+       on appelle taux d’accroissement de \(f\) en \(x_{0}\) et avec un pas de \(h\) la
+       quantité&#x202f;:
+       $$
+         \quad t_{x_{0}}(h)= {f(x_{0}+h)-f(x_{0}) \over h}
+       $$
+       Il s’agit du coefficient directeur de la droite reliant les points de coordonnées 
+      \( \left( x_{0}, f(x_{0}) \right) \) et \( \left( x_{0}+h, f(x_{0}+h) \right) \).
+      </div>
+
+      <div>
+        Si \( t_{x_{0}}(h) \) admet une limite finie lorsque \(h\) tend vers \(0\), on dit que \(f\)
+        est dérivable en \(x_0\), auquel cas le nombre dérivé de \(f\) en \(x_0\) est égal à la
+        limite de ce taux d’accroissement. On note alors&#x202f;:
+        $$
+          \quad \boxed{ f'(x_{0}) = \lim_{h \to 0 } t_{x_{0}}(h)
+                    = \lim_{h \to 0 } {f(x_{0}+h)-f(x_{0}) \over h} }
+        $$
+      </div>
+
+      <div>
+        Une fonction pour laquelle le taux d’accroissement en un point admet une limite finie (qui
+        est le nombre dérivé) est dite dérivable en ce point.
+      </div>
+
+      <div>
+        Ce calcul de limite revient graphiquement à rechercher la pente de la tangente à la courbe
+        en ce point. Ainsi, le nombre dérivé d’une fonction en un point, s’il existe, est égal à la
+        pente de la tangente à la courbe représentative de la fonction en ce point.
+      </div>
+
+      <h2>Fonction dérivée</h2>
+
+      <div>
+        La dérivabilité est a priori une notion locale (dérivabilité en un point), mais à toute
+        fonction \( f:{\mathcal {D}}_{f}\to \mathbb {R} \) on peut associer sa fonction dérivée
+        \(f'\) (prononcée <q>\(f\) prime</q>), donnée par&#x202f;:
+        $$
+          \quad f' \colon {\mathcal {D}}_{f'}\rightarrow \mathbb{R}, \quad x \mapsto f'(x)
+        $$
+        où \(\mathcal{D}_{f'}\) est le domaine de dérivabilité de \(f\) (le sous-ensemble de 
+        \(\mathcal{D}_{f}\) constitué des points en lesquels \(f\) est dérivable).
+      </div>
+
+      <div>
+        Les fonctions dérivées sont utilisées notamment dans l’étude des fonctions réelles et de
+        leurs variations.
+      </div>
+
+      <h2>Dérivées usuelles</h2>
+
+      <div>
+        \(f'\) peut souvent se calculer directement à partir d’une expression de \(f\) lorsqu’il
+        s’agit d’une fonction <q>simple</q>, en utilisant la table des dérivées usuelles.
+      </div>
+
+      <table>
+        <caption>Dérivées usuelles</caption>
+        <tr>
+          <th>Fonction \(f(x)\)</th>
+          <th>Dérivée \(f'(x)\)</th>
+        </tr>
+        <tr>
+          <td>\(k\)</td>
+          <td>\(0\)</td>
+        </tr>
+        <tr>
+          <td>\(kx\)</td>
+          <td>\(k\)</td>
+        </tr>
+        <tr>
+          <td>\(x^n\)</td>
+          <td>\(nx^{n-1}\)</td>
+        </tr>
+        <tr>
+          <td>\(1 \over x^{n}\)</td>
+          <td>\(-\frac{n}{x^{n+1}}\)</td>
+        </tr>
+        <tr>
+          <td>\(\sqrt[{n}]{x}\)</td>
+          <td>\(\frac {1}{n\sqrt[{n}]{x^{n-1}}}\)</td>
+        </tr>
+        <tr>
+          <td>\(\ln(x)\)</td>
+          <td>\(\frac{1}{x}\)</td>
+        </tr>
+        <tr>
+          <td>\({\rm{e}}^x\)</td>
+          <td>\({\rm{e}}^x\)</td>
+        </tr>
+        <tr>
+          <td>\(a^x\)</td>
+          <td>\(a^x\ln(a)\)</td>
+        </tr>
+        <tr>
+          <td>\(\sin(x)\)</td>
+          <td>\(\cos(x)\)</td>
+        </tr>
+        <tr>
+          <td>\(\cos(x)\)</td>
+          <td>\(-\sin(x)\)</td>
+        </tr>
+        <tr>
+          <td>\(\tan(x)\)</td>
+          <td>\(\frac{1}{\cos^{2}(x)}=1+\tan^{2}(x)\)</td>
+        </tr>
+        <tr>
+          <td>\(\arcsin(x)\)</td>
+          <td>\(\frac{1}{\sqrt{1-x^2}}\)</td>
+        </tr>
+        <tr>
+          <td>\(\arccos(x)\)</td>
+          <td>\(-\frac{1}{\sqrt{1-x^2}}\)</td>
+        </tr>
+        <tr>
+          <td>\(\arctan(x)\)</td>
+          <td>\(\frac{1}{1+x^2}\)</td>
+        </tr>
+      </table>
+
+      <h2>Règles de dérivation</h2>
+
+      <div>
+        Pour des fonctions qui s’expriment comme combinaison linéaire de fonctions simples, comme
+        produit, quotient ou composée, on utilise un petit nombre de règles algébriques déduite de
+        la définition. Les règles les plus couramment utilisées sont les suivantes&#x202f;:
+      </div>
+
+      <table>
+        <caption>Règles de dérivation</caption>
+        <tr>
+          <th>Nom</th>
+          <th>Règle</th>
+        </tr>
+        <tr>
+          <td>Linéarité</td>
+          <td>\((af+g)^{\prime }=af'+g'\)</td>
+        </tr>
+        <tr>
+          <td>Produit</td>
+          <td>\((fg)^{\prime }=f'g+fg'\)</td>
+        </tr>
+        <tr>
+          <td>Inverse</td>
+          <td>\(\left({1 \over g}\right)'={-g' \over g^{2}}\)</td>
+        </tr>
+        <tr>
+          <td>Quotient</td>
+          <td>\(\left({f \over g}\right)'={f'g-fg' \over g^{2}}\)</td>
+        </tr>
+        <tr>
+          <td>Composée</td>
+          <td>\((g\circ f)'=(g'\circ f)\cdot f'\)</td>
+        </tr>
+        <tr>
+          <td>Réciproque</td>
+          <td>\((f^{-1})'={\frac {1}{f'\circ f^{-1}}}\)</td>
+        </tr>
+      </table>  
+
+      <div>
+        En particulier, voici les règles courantes se déduisant de la dérivée de composées&#x202f;:
+      </div>
+
+      <table>
+        <caption>Règles de dérivation courantes de composées</caption>
+        <tr>
+          <th>Nom</th>
+          <th>Règle</th>
+        </tr>
+        <tr>
+          <td>Puissance</td>
+          <td>\((f^{\alpha})'=\alpha f^{\alpha-1}f'\)</td>
+        </tr>
+        <tr>
+          <td>Racine</td>
+          <td>\(\left(\sqrt{f}\right)'={f' \over 2\sqrt{f}}\)</td>
+        </tr>
+        <tr>
+          <td>Exponentielle</td>
+          <td>\((\mathrm{e}^f)^{\prime}=\mathrm{e}^f\cdot f'\)</td>
+        </tr>
+        <tr>
+          <td>Logarithme</td>
+          <td>\((\log_b f)^{\prime}={f' \over f\cdot \ln b}\)</td>
+        </tr>
+        <tr>
+          <td>Logarithme népérien</td>
+          <td>\((\ln f)^{\prime}={f' \over f}\)</td>
+        </tr>
+      </table> 
+
+      <h2>Dérivée d’ordre \(n\)</h2>
+
+      <h3>Dérivation itérée</h3>
+
+      <div>
+        La dérivée seconde, notée \(f''\), est la dérivée de la dérivée de \(f\), lorsqu’elle
+        existe&#x202f;:
+        $$
+          f''=(f')'
+        $$
+        et la dérivée troisième est la dérivée de la dérivée seconde, lorsqu’elle existe&#x202f;:
+        $$
+          f'''=(f'')'
+        $$
+      </div>
+
+      <div>
+        La dérivée n-ème de \(f\) est notée \(f^{(n)}\).
+      </div>
+
+      <h3>Formule de Leibniz</h3>
+
+      <div>
+        Si \(f\) et \(g\) sont des fonctions \(n\) fois dérivables, alors, par application de la
+        règle du produit&#x202f;:
+        $$
+          \quad (fg)^{(n)}=\sum _{k=0}^{n}{n \choose k}f^{(k)}g^{(n-k)}
+        $$
+        En particulier pour \(n=2\),
+        $$
+          \quad (fg)''=f''g+2f'g'+fg''
+        $$
+      </div>
+      
+      <h2>Propriétés des fonctions dérivables</h2>
+
+      <h3>Théorème de Rolle</h3>
+
+      <div>
+        Soient \(a\) et \(b\) deux réels tels que \(a \lt b\). Si \(f\) est continue sur \([a,b]\),
+        dérivable sur \(]a,b[\), et si \(f(a)=f(b)\), alors il existe (au moins) un réel \(c\) dans
+        \(]a,b[\) tel que&#x202f;: \(f'(c)=0\).
+      </div>
+
+      <h3>Théorème des accroissements finis</h3>
+
+      <div>
+        Si une fonction \(f\) est continue sur \([a,b]\), avec \(a \neq b\), et dérivable sur
+        \(]a,b[\), alors il existe un point \(c\) de \(]a,b[\) tel que le nombre dérivé de \(f\) en
+        ce point soit le taux de variation entre \(a\) et \(b\), i.e.&#x202f;:
+        $$
+          \quad f'(c) = \frac{f(b)-f(a)}{b-a}
+        $$
+      </div>
+
+    </section>
+  </body>
+</html>

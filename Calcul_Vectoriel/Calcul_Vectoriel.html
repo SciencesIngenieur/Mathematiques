@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calcul vectoriel</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+  
+    <section>
+    
+      <h1>Calcul vectoriel</h1>
+    
+      <h2>Grandeurs vectorielles</h2>
+      
+      <h3>Définition</h3>
+    
+      <div>
+        Une grandeur vectorielle, un vecteur, que nous noterons \(\overrightarrow{A}\), est
+        caractérisée de manière unique par&#x202f;:
+        <ul>
+          <li>une norme positive, notée \(\left\|\overrightarrow{A}\right\|\)</li>
+          <li>une direction</li>
+          <li>un sens</li>
+        </ul>
+      </div>
+      
+      <figure>
+        <img src="vecteur.png">
+        <figcaption>Représentation d’une grandeur vectorielle.</figcaption>
+      </figure>
+      
+      <div>
+        On le représente par un segment orienté (une flèche) dont la longueur est proportionnelle à
+        \(\left\|\overrightarrow{A}\right\|\). En physique, la norme représente la valeur de la
+        grandeur. Par exemple, la norme d’un vecteur force est son intensité en newton, celle du
+        vecteur vitesse est sa valeur en mètre par seconde, celle d’un vecteur déplacement s’exprime
+        en mètre, etc.
+      </div>
+      
+      <div>
+        Un vecteur de norme nulle, ne présente ni sens ni direction. On l’appelle vecteur nul et
+        le note \(\overrightarrow{0}\).
+      </div>
+      
+      <div>
+        Deux vecteurs sont égaux lorsqu’ils ont même direction, même sens et même norme. Autrement
+        dit on est libre de déplacer un vecteur tant qu’on ne change ni son orientation ni sa norme.
+      </div>
+      
+      <figure>
+        <img src="vecteurs_identiques.png">
+        <figcaption>Deux vecteurs identiques.</figcaption>
+      </figure>
+      
+      <h3>Propriétés</h3>
+      
+      <div>
+        La somme de deux vecteurs \(\overrightarrow{A}\) et \(\overrightarrow{B}\) est un vecteur
+        (notons le \(\overrightarrow{C}\)). Il s’obtient en mettant bout à bout les flèches
+        associées à \(\overrightarrow{A}\) et \(\overrightarrow{B}\), puis en joignant les
+        extrémités. Insistons sur le fait qu’en physique on ne peut sommer que deux grandeurs
+        vectorielles de même dimension&#x202f;: ajouter un vecteur force et un vecteur vitesse n’a
+        strictement aucun sens.
+      </div>
+      
+      <figure>
+        <img src="somme_vecteurs.png">
+        <figcaption>Somme de deux vecteurs.</figcaption>
+      </figure>
+      
+      <div>
+        On peut vérifier géométriquement les propriétés suivantes&#x202f;:<br />
+        <ol>
+          <li>Associativité&#x202f;: \( \left( \overrightarrow{A} + \overrightarrow{B} \right) +
+            \overrightarrow{C} = \overrightarrow{A} + \left( \overrightarrow{B} + \overrightarrow{C}
+            \right) \)</li>
+          <li>Commutativité&#x202f;:\( \overrightarrow{A} + \overrightarrow{B} = \overrightarrow{B}
+            + \overrightarrow{A}\)</li>
+          <li>Élément neutre&#x202f;:\( \overrightarrow{A} + \overrightarrow{0} = 
+            \overrightarrow{A}\)</li>
+          <li>Opposé&#x202f;:\( \overrightarrow{A} + \overrightarrow{-A} = \overrightarrow{0}\)</li>
+        </ol>
+      </div>
+      
+      <div>
+        Si \(\lambda\) est un réel et \(\overrightarrow{A}\) un vecteur, alors
+        \(\lambda\overrightarrow{A}\) est un vecteur colinéaire à \(\overrightarrow{A}\)&#x202f;:
+        leur droite support sont parallèles. Si \(\lambda \gt 0\), \(\lambda\overrightarrow{A}\)
+        présente le même sens que \(\overrightarrow{A}\), si \(\lambda \lt 0\),
+        \(\lambda\overrightarrow{A}\)est de sens opposé.<br />
+        Concernant les normes on a la relation suivante&#x202f;:
+        \(\left\|\lambda\overrightarrow{A}\right\| = \left|\lambda\right|
+        \left\|\overrightarrow{A}\right\|\).
+      </div>
+      
+      <figure>
+        <img src="multiplication_vecteur.png">
+        <figcaption>Multiplication par une constante.</figcaption>
+      </figure>
+      
+      <h3>Base vectorielle</h3>
+      
+      <h4>Généralités</h4>
+      
+      <div>
+        On dit que deux vecteurs \(\left( \overrightarrow{u_1}, \overrightarrow{u_2}\right)\)
+        forment une base \(\mathcal{B}\) du plan, si tout vecteur du plan peut s’exprimer comme une
+        combinaison linéaire de ces vecteurs de base&#x202f;:
+        $$
+          \quad \overrightarrow{A} = A_1\overrightarrow{u_1} + A_2\overrightarrow{u_2} = 
+          \begin{pmatrix} A_1 \\ A_2 \end{pmatrix}
+        $$
+        \(A_1\) et \(A_2\) désignent les composantes du vecteur \(\overrightarrow{A}\) dans la base
+         \(\mathcal{B}\).
+      </div>
+      
+      <h4>Base cartésienne</h4>
+      
+      <div>
+        Il s’agit d’une base orthonormée&#x202f;: les vecteurs de base ont pour norme 1 et sont
+        perpendiculaires entre eux. Dans un espace à deux dimensions, la base cartésienne est formée
+        de deux vecteurs&#x202f;: \(\left( \overrightarrow{u_x}, \overrightarrow{u_y}\right)\) avec
+        \( \left\|\overrightarrow{u_x}\right\|= \left\|\overrightarrow{u_y}\right\|=1\) et
+        \(\overrightarrow{u_x} \perp \overrightarrow{u_y}\).
+      </div>
+      
+      <div>
+        Dans le plan, il est aisé d’exprimer les composantes cartésiennes d’un vecteur en fonction
+        de sa norme et de l’angle que forme le vecteur avec un des axes cartésiens&#x202f;:
+        $$
+          \quad \overrightarrow{A} =
+          \begin{pmatrix}
+            A_x = A\cos \alpha \\
+            A_y = A\sin \alpha
+          \end{pmatrix}
+        $$
+      </div>
+      
+      <figure>
+        <img src="base_cartesienne.png">
+        <figcaption>Base cartésienne.</figcaption>
+      </figure>
+      
+      <h4>Repère d’espace</h4>
+      
+      <div>
+        Un repère d’espace est constitué d’un point \(O\), appelé origine, et d’une base de deux
+        vecteurs \(\left( \overrightarrow{u_1}, \overrightarrow{u_2}\right)\) si on se place dans le
+        plan euclidien, ou de trois vecteurs \(\left( \overrightarrow{u_1}, \overrightarrow{u_2},
+        \overrightarrow{u_3} \right)\) dans l’espace euclidien à trois dimensions.<br />
+        Les coordonnées \(\left(x,y,z\right)\) d’un point \(P\) dans un repère tridimensionnel sont
+        les composantes du vecteur \(\overrightarrow{OP}\)&#x202f;:
+        $$
+          \quad \overrightarrow{OP} = x \overrightarrow{u_1} + y \overrightarrow{u_2}
+          +z \overrightarrow{u_3}
+        $$
+      </div>
+      
+      <div>
+        Considérons deux points, \(P_1\) et \(P_2\) de coordonnées \(\left(x_1,y_1,z_1\right)\) et
+        \(\left(x_2,y_2,z_2\right)\). Le vecteur \(\overrightarrow{P_1P_2}\) s’écrit&#x202f;:
+        $$
+          \quad \overrightarrow{P_1P_2} = \overrightarrow{P_1O} + \overrightarrow{OP_2}
+            = \overrightarrow{OP_2} - \overrightarrow{OP_1}
+            = \begin{pmatrix}
+                x_2-x_1 \\
+                y_2-y_1 \\
+                z_2-z_1
+              \end{pmatrix}
+        $$
+      </div>
+      
+      <figure>
+        <img src="repere_cartesien.png">
+        <figcaption>Exemple de repère cartésien.</figcaption>
+      </figure>
+      
+      <h3>Vecteur lié</h3>
+      
+      <div>
+        En physique, certaines grandeurs ont les attributs d’un vecteur (une norme, une direction et
+        un sens) tout en présentant une caractéristique supplémentaire&#x202f;: un point
+        d’application. C’est le cas de la force, objet fondamental de la mécanique.
+      </div>
+      
+      <div>
+        On modélise ce type de grandeur à l’aide du concept de vecteur lié, ou pointeur. Un vecteur
+        lié est un couple formé par un vecteur \(\overrightarrow{v}\) et un point \(A\); on le note
+        \(\left(A,\overrightarrow{v}\right)\).
+      </div>
+      
+      <h2>Produit scalaire</h2>
+      
+      <h3>Définition</h3>
+      
+      <div>
+        Le produit scalaire de deux vecteurs \(\overrightarrow{A}\) et \(\overrightarrow{B}\), noté
+        \(\overrightarrow{A} \cdot \overrightarrow{B}\), est le nombre réel (ou scalaire,
+        d’où son nom)&#x202f;:
+        $$
+          \quad \boxed{ \overrightarrow{A} \cdot \overrightarrow{B} \overset{def}{=}
+            \left\|\overrightarrow{A}\right\|
+            \times \left\|\overrightarrow{B}\right\| \times \cos(\theta) }
+        $$
+        où \(\theta\) est l’angle formé par les deux vecteurs. Notons qu’il n’est pas nécessaire
+        d’orienter les angles pour calculer un produit scalaire.
+      </div>
+      
+      <figure>
+        <img src="angle_vecteurs.png">
+        <figcaption>Angle formé par deux vecteurs.</figcaption>
+      </figure>
+      
+      <div>
+        Le produit scalaire est positif quand l’angle est aigüe, négatif quand il est obtus.
+      </div>
+      
+      <h3>Propriétés</h3>
+      
+      <div>
+        Le produit scalaire est commutatif&#x202f;: \(\overrightarrow{A} \cdot \overrightarrow{B} =
+        \overrightarrow{B} \cdot \overrightarrow{A}\)
+      </div>
+      
+      <div>
+        Le produit scalaire est distributif&#x202f;: \(\overrightarrow{A} \cdot
+        \left( \overrightarrow{B} + \overrightarrow{C} \right) = \overrightarrow{A} \cdot
+        \overrightarrow{B} + \overrightarrow{A} \cdot \overrightarrow{C} \)
+      </div>
+      
+      <div>
+        Le carré scalaire donne le carré de la norme&#x202f;: \(\overrightarrow{A} \cdot
+        \overrightarrow{A} = \left\|\overrightarrow{A}\right\|^2\).
+      </div>
+      
+      <div>
+        Si \(\overrightarrow{A} \perp \overrightarrow{B}\) alors \(\overrightarrow{A} \cdot
+        \overrightarrow{B} = 0\).
+      </div>
+      
+      <div>
+        Dans une base cartésienne, le produit scalaire s’exprime simplement en fonction des
+        composantes&#x202f;:
+        $$
+          \quad \overrightarrow{A} \cdot \overrightarrow{B} =
+            \begin{pmatrix}
+              A_x \\
+              A_y \\
+              A_z
+            \end{pmatrix}
+            \cdot
+            \begin{pmatrix}
+              B_x \\
+              B_y \\
+              B_z
+            \end{pmatrix} =
+            A_xB_x + A_yB_y + A_zB_z
+        $$
+      </div>
+      
+      <div>
+        En conséquence, la norme \(\left\|\overrightarrow{A}\right\|\) d’un vecteur exprimé dans une
+        base orthonormée est donnée par la relation&#x202f;:
+        $$
+          \quad \left\|\overrightarrow{A}\right\| = \sqrt{ {A_x}^2 + {A_y}^2 + {A_z}^2 }
+        $$
+      </div>
+      
+      <h2>Produit vectoriel</h2>
+      
+      <h3>Définition</h3>
+      
+      <div>
+        Le produit vectoriel des vecteurs \(\overrightarrow{A}\) et \(\overrightarrow{B}\), noté
+        \(\overrightarrow{A} \wedge \overrightarrow{B}\), est vecteur aux caractéristiques
+        suivantes&#x202f;:
+        <ul>
+          <li>sa direction est perpendiculaire au plan formé par\(\overrightarrow{A}\) et
+            \(\overrightarrow{B}\)</li>
+          <li>sons sens est donné par la règle des trois doigts de la main droite</li>
+          <li>sa norme vaut \( \left\|\overrightarrow{A} \wedge \overrightarrow{B}\right\| = 
+            \left\|\overrightarrow{A}\right\| \times \left\|\overrightarrow{B}\right\| \times
+            \left|\sin(\theta)\right|\) où \(\theta\) est l’angle formé par \(\overrightarrow{A}\)
+            et \(\overrightarrow{B}\)</li>
+        </ul>
+      </div>
+      
+      <figure>
+        <img src="regle_main_droite.png">
+        <figcaption>Règle de la main droite.</figcaption>
+      </figure>
+      
+      <h3>Propriétés</h3>
+      
+      <div>
+        Le produit vectoriel est distributif&#x202f;:\(\overrightarrow{A} \wedge
+        \left( \overrightarrow{B} + \overrightarrow{C} \right) = \overrightarrow{A} \wedge
+        \overrightarrow{B} + \overrightarrow{A} \wedge \overrightarrow{C} \)
+      </div>
+      
+      <div>
+        Le produit vectoriel est anticommutatif&#x202f;:\(\overrightarrow{A} \wedge
+        \overrightarrow{B}  = - \left( \overrightarrow{B} \wedge \overrightarrow{A} \right) \)
+      </div>
+      
+      <div>
+        \( \left( \lambda \overrightarrow{A} \right) \wedge \overrightarrow{B}  =
+        \lambda \left( \overrightarrow{A} \wedge \overrightarrow{B} \right) =
+        \overrightarrow{A} \wedge \left( \lambda  \overrightarrow{B} \right) \)
+      </div>
+      
+      <div>
+        Si \(\overrightarrow{A}\) et \(\overrightarrow{B}\) sont colinéaires, \(\overrightarrow{A}
+        \wedge  \overrightarrow{B} =  \overrightarrow{0} \)
+      </div>
+      
+      <div>
+        Le produit vectoriel de deux vecteurs exprimés dans la même base orthonormée directe
+        s’écrit&#x202f;:
+        $$
+          \quad \overrightarrow{A} \wedge \overrightarrow{B} =
+          \begin{pmatrix}
+            A_1 \\
+            A_2 \\
+            A_3
+          \end{pmatrix}
+          \wedge
+          \begin{pmatrix}
+            B_1 \\
+            B_2 \\
+            B_3
+          \end{pmatrix} =
+          \begin{pmatrix}
+            A_2B_3 - A_3B_2 \\
+            A_3B_1 - A_1B_3 \\
+            A_1B_2 - A_2B_1
+          \end{pmatrix}
+        $$
+      </div>
+      
+      <div>
+        Formule du double produit vectoriel&#x202f;:
+        $$
+          \quad \overrightarrow{A} \wedge \left( \overrightarrow{B}\wedge\overrightarrow{C} \right)=
+            \left(\overrightarrow{A}\cdot\overrightarrow{C}\right)\overrightarrow{B}
+              - \left(\overrightarrow{A}\cdot\overrightarrow{B}\right)\overrightarrow{C}
+        $$
+      </div>
+      
+    </section>
+  </body>
+</html>
+

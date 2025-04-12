@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exponentielle de base a</title>
+    <link rel="stylesheet" type="text/css" media="screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Exponentielle de base a</h1>
+
+      <div>
+        En analyse réelle, l’exponentielle de base \(a\) est la fonction notée \(\exp_a\) qui, à
+        tout réel \(x\), associe le réel \(a^x\). Elle n’a de sens que pour un réel \(a\)
+        strictement positif. Elle étend à l’ensemble des réels la fonction, définie sur l’ensemble
+        des entiers naturels, qui à l’entier \(n\) associe \(a^n\). C’est donc la version continue
+        d’une suite géométrique.
+      </div>
+      
+      <h2>Définitions</h2>
+      
+      <h3>Par la propriété algébrique</h3>
+      
+      <div>
+        On appelle fonction exponentielle réelle, toute fonction de \(\mathbb{R}\) dans
+        \(\mathbb{R}\), non identiquement nulle et continue en au moins un point, transformant une
+        somme en produit, c’est-à-dire vérifiant l’équation fonctionnelle&#x202f;:
+        $$
+          \quad \forall u,v \in \mathbb{R} \quad f(u+v)=f(u)\times f(v)
+        $$
+        et prenant la valeur \(a\) en \(1\).
+      </div>
+      
+      <h3>Par les fonction exponentielle et logarithme népérien</h3>
+      
+      <div>
+        Soit \(a\) un réel strictement positif. On appelle fonction exponentielle de base \(a\) la
+        fonction définie sur \(\mathbb{R}\) par&#x202f;:
+        $$
+          \quad f(x)= \mathrm{e}^{x\ln(a)}
+        $$
+      </div>
+      
+      <h3>Par une équation différentielle</h3>
+      
+      <div>
+        On appelle fonction exponentielle toute fonction dérivable vérifiant l’équation
+        différentielle et la condition initiale suivantes&#x202f;:
+        $$
+          \quad \begin{cases}
+            f' = kf \quad k \in \mathbb{R}  \\ 
+            f(0) = 1
+            \end{cases}
+        $$
+      </div>
+      
+      <h3>Comme réciproque des fonctions logarithmes</h3>
+      
+      <div>
+        Soit \(a\) un réel strictement positif, différent de \(1\). La fonction logarithme de base
+        \(a\)  est une bijection de \(\mathbb{R}^{+*}\) dans \(\mathbb{R}\). On appelle fonction
+        exponentielle de base \(a\) sa bijection réciproque&#x202f;:
+        $$
+          \quad \bigl( x \in \mathbb{R}, \quad y=\exp_{a}(x) \bigr) \Leftrightarrow
+            \bigl( y \in \left]0,+\infty \right[, \quad x=\log_{a}(y) \bigr)
+        $$
+      </div>
+      
+      <h2>Propriétés algébriques</h2>
+      
+      <div>
+        Pour tous réels strictement positifs \(a\) et \(b\) et pour tous réels \(x\) et
+        \(y\)&#x202f;:
+        $$
+          \quad a^x = \mathrm{e}^{x\ln(a)}
+        $$
+        $$
+          \quad a^x=b^{x\log_{b}(a)}
+        $$
+        $$
+          \quad a^{xy}=\left(a^x\right)^y
+        $$
+        $$
+          \quad a^{x+y}=a^xa^y
+        $$
+        $$
+          \quad a^0=1
+        $$
+        $$
+          \quad \frac{1}{a^x}=a^{-x}
+        $$
+        $$
+          \quad a^xb^x=(ab)^x
+        $$
+        $$
+          \quad 1^x=1
+        $$
+        $$
+          \quad \frac{1}{a^{x}} = \left( \frac{1}{a} \right)^{x}
+        $$
+        $$
+          \quad a^1=a
+        $$
+      </div>
+      
+      <h2>Étude de fonction</h2>
+      
+      <div>
+        La fonction exponentielle de base \(a\) est indéfiniment dérivable sur \(\mathbb{R}\) et sa
+        dérivée a pour expression&#x202f;:
+        $$
+          \quad {\exp_{a}}^{\prime}(x) = \ln(a) \exp_{a}(x)
+        $$
+        Puisque la fonction exponentielle est toujours positive, le signe de sa dérivée ne dépend
+        que du signe de \(\ln(a)\). La fonction est donc strictement croissante lorsque la base
+        \(a\) est strictement plus grande que \(1\)&#x202f;; elle est strictement décroissante quand
+        la base est inférieure à \(1\) et constante si on a pris pour base \(a=1\).
+      </div>
+      
+      <div>
+        Les limites de la fonction exponentielle de base \(a\) dépendent de la position de \(a\) par
+        rapport à \(1\).
+      </div>
+      
+      <div>
+        Si \(a \gt 1\) alors&#x202f;:
+        $$
+          \quad \lim_{x \to +\infty}a^{x}=+\infty
+        $$
+        et
+        $$
+          \quad \lim_{x\to -\infty}a^{x}=0
+        $$
+      </div>
+      
+      <figure>
+        <img src="exp_5_x.svg" width="50%"/>
+        <figcaption>Graphique de la fonction \(y=5^x\).</figcaption>
+      </figure>
+      
+      <div>
+        Si \(a \lt 1\) alors&#x202f;:
+        $$
+          \quad \lim_{x \to +\infty}a^{x}=0
+        $$
+        et
+        $$
+          \quad \lim_{x\to -\infty}a^{x}=+\infty
+        $$
+      </div>
+      
+      <figure>
+        <img src="exp_0_5_x.svg" width="50%"/>
+        <figcaption>Graphique de la fonction \(y=0,5^x\).</figcaption>
+      </figure>
+      
+      <div>
+        La fonction exponentielle a un comportement prévisible par rapport à la fonction
+        puissance&#x202f;: en cas d'indétermination en \(+\infty\), c’est l’exponentielle qui
+        l’emporte:
+        $$
+           \quad \lim_{x\to +\infty }{\frac{a^x}{x^b}}=+\infty
+           \quad \forall a,b \in \mathbb{R},\, a \gt 1
+        $$
+      </div>
+      
+    </section>
+  </body>
+</html>
