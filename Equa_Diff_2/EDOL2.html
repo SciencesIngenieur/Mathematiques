@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Équations différentielles ordinaires linéaires du second ordre</title>
+    <link rel="stylesheet" type="text/css" media="screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Équations différentielles ordinaires linéaires du second ordre</h1>
+
+      <h2>Définition</h2>
+
+      <div>
+        On appelle équation différentielle ordinaire linéaire du second ordre toute équation de la
+        forme&#x202f;:
+        $$
+          \quad a(x){y}''(x) + b(x){y}'(x) + c(x)y(x) = f(x)
+        $$
+        où \(y\) est une fonction inconnue, et \(a\), \(b\),  \(c\) et \(f\) sont des fonctions
+        connues qui dépendent d’une seule variable.  La variable et les fonctions peuvent être
+        réelles ou complexes.
+      </div>
+      
+      <div>
+        Ces équations différentielles ne peuvent pas toutes être résolues explicitement mais
+        plusieurs méthodes existent pour résoudre celles qui peuvent l’être, ou à défaut pour en
+        étudier les solutions qualitativement. Les plus fréquentes et les plus simples à résoudre
+        sont les équations à coefficients constants(où \(a\), \(b\) et \(c\) sont des constantes).
+      </div>
+      
+      <h2>Équation homogène à coefficients constants</h2>
+      
+      <div>
+        Elles sont de la forme \(a(x){y}''(x)+b(x){y}'(x)+c(x)y(x)=0\) où \(a\), \(b\) et \(c\) sont
+        réels ou complexes, \(a\) non nul.
+      </div>
+      
+      <div>
+        On cherche des solutions sous forme exponentielle, c’est-à-dire telles que
+        \(y_h(x)=\mathrm{e}^{\lambda x}\). Une telle fonction sera solution de l’équation
+        différentielle si et seulement si \(\lambda\) est solution de&#x202f;:
+        $$
+          \quad a\lambda^2 + b\lambda + c = 0
+        $$
+        Cette équation est appelée équation caractéristique de l’équation différentielle.
+      </div>
+      
+      <h3>Cas réel</h3>
+      
+      <div>
+        Il s’agit du cas où les coefficients sont des réels et où les solutions sont cherchées parmi
+        les fonctions à valeurs réelles. Comme pour toute équation du second degré, trois cas se
+        présentent selon le signe du discriminant \(\Delta\) de l’équation caractéristique.
+      </div>
+      
+      <h4>\(\Delta \gt 0\)</h4>
+      
+      <div>
+        L’équation caractéristique possède deux solutions réelles \(\lambda_1\) et \(\lambda_2\).
+      </div>
+      
+      <div>
+        Les solutions sont alors les fonctions définies sur \(\mathbb{R}\) par&#x202f;:
+        $$
+          \quad y_h(x)=A{\mathrm{e}}^{\lambda_{1}x}+B{\mathrm{e}}^{\lambda_{2}x}
+        $$
+        où \(A\) et \(B\) sont deux réels.
+      </div>
+      
+      <div>
+        La détermination de ces deux constantes peut se faire en donnant des conditions initiales en
+        un point \(x_0\), c’est-à-dire en précisant les valeurs \(y_0 = y_h(x_0)\) et
+        \(y'_0 = y'_h(x_0)\). Dans ce cas l’existence et l’unicité de la solution vérifiant ces
+        conditions initiales sont garanties.
+      </div>
+      
+      <h4>\(\Delta = 0\)</h4>
+      
+      <div>
+        L’équation caractéristique a une solution double \(\lambda_0\).
+      </div>
+      
+      <div>
+        Les solutions sont alors les fonctions définies sur \(\mathbb{R}\) par&#x202f;:
+        $$
+          \quad y_h(x)=\left(Ax+B\right){\mathrm{e}}^{\lambda_{0}x}
+        $$
+        où \(A\) et \(B\) sont deux réels.
+      </div>
+      
+      <div>
+        Pour déterminer \(A\) et \(B\), il faut, comme dans le cas précédent posséder deux
+        informations sur \(y_h\).
+      </div>
+      
+      <h4>\(\Delta \lt 0\)</h4>
+      
+      <div>
+        L’équation caractéristique a deux solutions complexes conjuguées distinctes
+        \(u+\mathrm{i}v\) et \(u-\mathrm{i}v\).
+      </div>
+      
+      <div>
+        Les solutions sont alors les fonctions \(y_h\) définies sur \(\mathbb{R}\)
+        par&#x202f;:
+        $$
+          \quad y_h(x)=\mathrm{e}^{ux} \left( A\cos(\left|v\right|x) + B\sin(\left|v\right|x)\right)
+        $$
+        où \(A\) et \(B\) sont deux réels.
+      </div>
+      
+      <div>
+        On peut écrire cette solution sous la forme&#x202f;:
+        $$
+          \quad  y_h(x) = q \mathrm{e}^{ux}\cos(|v|x+r)
+        $$
+        où \(q\) et \(r\) sont deux réels.
+      </div>
+      
+      <div>
+        La détermination de \(A\) et \(B\) ou bien de \(q\) et \(r\) se fait, comme dans les cas
+        précédents, par la donnée de deux informations sur \(y_h\).
+      </div>
+      
+      <h3>Cas complexe</h3>
+      
+      <div>
+        Dans le cas où les coefficients sont complexes et où les solutions sont cherchées parmi les
+        fonctions de la variable réelle à valeurs complexes, il ne reste alors que deux cas à
+        étudier.
+      </div>
+      
+      <div>
+        Si le discriminant est non nul, l’équation caractéristique possède deux racines distinctes
+        \(\lambda_1\) et \(\lambda_2\) et les fonctions de \(\mathbb{R}\) dans \(\mathbb{C}\)
+        solutions de l’équation différentielle sont les fonctions définies par&#x202f;:
+        $$
+          \quad y_h(x) = C_1 \mathrm{e}^{\lambda_1 x} + C_2 \mathrm{e}^{\lambda_2 x}
+        $$
+        où \(C_1\) et \(C_2\) sont deux complexes.
+      </div>
+      
+      <div>
+        Si le discriminant est nul, l’équation caractéristique ne possède qu’une seule solution
+        \(\lambda_0\) et les solutions sont les fonctions définies sur \(\mathbb{R}\) par 
+        $$
+          \quad y_h(x) =(C_1x+C_2){\mathrm{e}}^{\lambda_0 x}
+        $$
+        où \(C_1\) et \(C_2\) sont deux complexes.
+      </div>
+      
+      <div>
+        La détermination des constantes se fait, comme dans les cas précédents, par la donnée de
+        deux informations sur \(y_h\).
+      </div>
+      
+      <h2>Équation à coefficients constants avec second membre</h2>
+      
+      <h3>Application du principe de superposition</h3>
+      
+      <div>
+        Lorsque l’équation différentielle possède un second membre (\(f\) est une fonction non
+        nulle), il reste possible d’exploiter ce qui précède. L’équation obtenue en remplaçant
+        \(f\) par la fonction nulle est appelée équation homogène associée à l’équation
+        différentielle&#x202f;; on la suppose résolue.
+      </div>
+      
+      <div>
+        Il suffit alors de trouver une solution \(y_p\) de l’équation avec second membre, pour les
+        connaître toutes. En effet, les solutions de l’équation différentielle sont les fonctions
+        \(y_p\) + \(y_h\) où \(y_h\) est une solution générale de l’équation homogène associée.
+      </div>
+      
+      <div>
+        Si le second membre \(f\) est la somme de deux fonctions \(f_1\) et \(f_2\)&#x202f;: 
+        \(ay''+by'+cy=f_1+f_2\), on peut chercher une solution particulière \(s_{p1}\) de l’équation
+        différentielle de second membre \(f_1\), puis une solution particulière \(s_{p2}\) de
+        l’équation différentielle de second membre \(f_2\). La somme \(f=f_1+f_2\) de ces deux
+        solutions particulières est solution particulière de l’équation de départ. Ce principe se
+        généralise facilement au cas où \(f\) est la somme de plus de deux fonctions.
+      </div>
+      
+      <div>
+        Remarquons que les constantes d’une solution doivent être déterminées en toute fin de
+        résolution, lorsque l’on a additionné la solution générale de l’équation homogène et la (ou
+        les) solution(s) particulière(s) de l’équation (ou des équations) avec second membre.
+      </div>
+      
+      <h3>Recherche de solutions</h3>
+      
+      <div>
+        Si \(a\), \(b\) et \(c\) sont des constantes (\(a\) non nul) et si \(f\) est produit d’une
+        fonction polynomiale, d’une fonction trigonométrique et d’une fonction exponentielle, on
+        cherche une solution particulière de la même forme.
+      </div>
+      
+      <div>
+        Plus précisément, si \(f\) est de la forme&#x202f;:
+        $$
+          \quad f : x \mapsto \mathrm{e}^{mx}
+            \left(
+              A(x)\cos(\omega x) + B(x)\sin(\omega x)
+            \right)
+        $$
+        où \(A\) et \(B\) sont des polynômes de degré inférieur ou égal à \(n\) et où \(m\) et
+        \(\omega\) sont des réels, il existe une unique solution de la forme&#x202f;:
+        $$
+          \quad y_p : x \mapsto x^p \mathrm{e}^{mx}
+            \left(
+              \alpha(x)\cos(\omega x) + \beta(x)\sin(\omega x)
+            \right)
+        $$
+        où \(\alpha\) et \(\beta\) sont des polynômes de degré inférieur ou égal à \(n\) et \(p\)
+        peut prendre trois valeurs&#x202f;:
+        <ul>
+          <li>0 si \(m+\mathrm{i}\omega\) n’est pas racine de l’équation caractéristique</li>
+          <li>1 si \(m+\mathrm{i}\omega\) est racine simple de l’équation caractéristique</li>
+          <li>2 si \(m+\mathrm{i}\omega\) est racine double de l’équation caractéristique</li>
+        </ul>
+      </div>
+      
+      <div>
+        Ceci inclut le cas où les polynômes \(A\) et \(B\) sont simplement des constantes (\(n=0\)),
+        dont l’une peut être nulle, ou \(f\) ne contient pas d’exponentielle (\(m=0\)) ou pas de
+        fonction trigonométrique (\(\omega=0\)).
+      </div>
+
+    </section>
+  </body>
+</html>
