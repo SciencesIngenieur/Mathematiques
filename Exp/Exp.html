@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exponentielle</title>
+    <link rel="stylesheet" type="text/css" media="print,screen" 
+      href="https://sciencesingenieur.github.io/Styles/styles.css"/>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Exponentielle</h1>
+      
+      <h2>Introduction</h2>
+
+      <div>
+        La fonction exponentielle est la fonction notée \(\exp\) qui est égale à sa propre dérivée
+        et prend la valeur \(1\) en \(0\).
+      </div>
+      
+      <div>
+        On note \(\mathrm{e}\) la valeur de cette fonction en \(1\). Ce nombre \(\mathrm{e}\) qui
+        vaut approximativement \(2,71828\) s’appelle la base de la fonction exponentielle et permet
+        une autre notation de la fonction exponentielle&#x202f;:
+        $$
+          \quad \forall x \quad \exp(x) = \mathrm{e}^x
+        $$
+      </div>
+      
+      <div>
+        La fonction exponentielle est la seule fonction continue sur \(\mathbb{R}\) qui transforme
+        une somme en produit et qui prend la valeur \(\mathrm{e}\) en \(1\). C’est un cas
+        particulier des fonctions de ce type appelées
+        <a href="https://sciencesingenieur.github.io/Mathematiques/Exp_Base_a/Exp_Base_a.html"
+        target="_blank">exponentielles de base a</a>.
+      </div>
+      
+      <h2>Définitons</h2>
+      
+      <h3>Par une équation différentielle</h3>
+      
+      <div>
+        On appelle fonction exponentielle l’unique fonction dérivable solution du problème de Cauchy
+        suivant&#x202f;:
+        $$
+          \quad \begin{cases}
+            f' = f \\ 
+            f(0) = 1
+            \end{cases}
+        $$
+      </div>
+      
+      <h3>À partir de la fonction logarithme népérien</h3>
+      
+      <div>
+        La fonction \(\exp\), de \(\mathbb{R}\) dans \(\mathbb{R}^{+*}\), est la bijection
+        réciproque de la fonction logarithme népérien.
+      </div>
+      
+      <h3>Par la propriété algébrique</h3>
+      
+      <div>
+        La fonction \(\exp\) est l’unique fonction continue de \(\mathbb{R}\) dans
+        \(\mathbb{R}^{+*}\) transformant une somme en produit, c’est-à-dire vérifiant l’équation
+        fonctionnelle&#x202f;:
+        $$
+          \quad \forall u,v \in \mathbb{R} \quad f(u+v)=f(u)\times f(v)
+        $$
+        et prenant la valeur \(\mathrm{e}\) en \(1\).
+      </div>
+      
+      <div>
+        Il est possible de s’affranchir de la nécessité de connaître au préalable \(\mathrm{e}\) par
+        la caractérisation suivante&#x202f;:<br />
+        La fonction \(\exp\) est l’unique fonction continue de \(\mathbb{R}\) dans
+        \(\mathbb{R}^{+*}\) transformant une somme en produit, c’est-à-dire vérifiant l’équation
+        fonctionnelle&#x202f;:
+        $$
+          \quad \forall u,v \in \mathbb{R} \quad f(u+v)=f(u)\times f(v)
+        $$
+        et dont la dérivée prend la valeur \(1\) en \(0\).
+      </div>
+      
+      <h3>Par une série entière</h3>
+      
+      <div>
+        On peut définir l’application exponentielle \(\exp\) comme la somme d'une série entière de
+        rayon de convergence infini&#x202f;:
+        $$
+          \quad \exp(x) = \sum_{n=0}^{+\infty}{x^n \over n!}
+        $$
+      </div>
+      
+      <h2>Étude de fonction</h2>
+      
+      <figure>
+        <img src="exp_x.svg" width="60%"/>
+        <figcaption>Tracé de la courbe \(y = \rm{e}^{x}\).</figcaption>
+      </figure>
+
+      <div>
+        La fonction \(\exp\) prend en \(1\) une valeur notée \(\mathrm{e}\), qui vaut environ
+        \(2,718\) et est un nombre transcendant.
+      </div>
+      
+      <div>
+        La fonction \(\exp\) est de classe \(C^{\infty}\).
+      </div>
+      
+      <div>
+        La fonction \(\exp\) est strictement croissante de \(\mathbb{R}\) dans \(\mathbb{R}^{+*}\)
+        et&#x202f;:
+        $$
+          \quad \lim_{x\to -\infty}\exp(x)=0
+        $$
+        et
+        $$
+          \quad \lim_{x\to +\infty}\exp(x)=+\infty
+        $$
+      </div>
+      
+      <div>
+        La fonction \(\exp\) tend vers \(+\infty\) plus rapidement que toute fonction polynomiale
+        quand sa variable tend vers \(+\infty\), c’est-à-dire que&#x202f;:
+        $$
+          \quad \lim_{x\to +\infty }{\frac{\exp(x)}{x^n}} = +\infty \quad \forall n \in \mathbb{N}
+        $$
+      </div>
+      
+      <div>
+        Par changement de variable, on en déduit&#x202f;:
+        $$
+          \quad \lim_{x\to -\infty }x^{n}\exp(x)=0 \quad \forall n \in \mathbb{N}
+        $$
+      </div>
+      
+    </section>
+  </body>
+</html>
